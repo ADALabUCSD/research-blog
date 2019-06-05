@@ -1,3 +1,1 @@
-# blog.adalabucsd.github.io
-
-ADA Lab Blog
+# ADA Lab Blog
