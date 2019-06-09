@@ -35,7 +35,7 @@ We have also developed intuitive and easy to use approaches for tuning the appro
 
 Concluding remarks
 ==================
-Krypton is one of our projects which tries to improve machine learning workloads by performing data management inspired techniques. In particular the techniques in Krypton are inspired by the long line of work on multi-query optimization, incremental view maintenance, and approximate query processing techniques in the data management literature. By reducing the runtime of OBE, Krypton makes OBE more amenable for the interactive and/or mobile diagnosis of CNN predictions.
+Krypton belongs to a broader group of our projects which try to improve machine learning workloads by performing data management inspired techniques. In particular the techniques in Krypton are inspired by the long line of work on multi-query optimization, incremental view maintenance, and approximate query processing techniques in the data management literature. By reducing the runtime of OBE, Krypton makes OBE more amenable for the interactive and/or mobile diagnosis of CNN predictions.
 
 A demonstration of Krypton can be found below:
 
