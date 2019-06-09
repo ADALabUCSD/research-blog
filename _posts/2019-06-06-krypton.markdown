@@ -33,7 +33,7 @@ Our second approximate inference optimization is called "adaptive drill-down" ap
 
 We have also developed intuitive and easy to use approaches for tuning the approximate inference configuration parameters which includes the truncation threshold for projective field thresholding and drill down fraction for adaptive drill-down method. More details on these techniques can can found in our paper.
 
-Concluding Remarks
+Concluding remarks
 ==================
 Krypton is one of our projects which tries to improve machine learning workloads by performing data management inspired techniques. In particular the techniques in Krypton are inspired by the long line of work on multi-query optimization, incremental view maintenance, and approximate query processing techniques in the data management literature. By reducing the runtime of OBE, Krypton makes OBE more amenable for the interactive and/or mobile diagnosis of CNN predictions.
 
