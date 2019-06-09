@@ -24,7 +24,7 @@ layout: default
         </h3>
         
         {%- if site.show_excerpts -%}
-          {{ post.excerpt | strip_html | truncatewords:25 | }}
+          {{ post.excerpt | strip_html | truncatewords:25 }}
         {%- endif -%}
         {% if post.excerpt != post.content %}
             <a href="{{ site.baseurl }}{{ post.url }}">Read more</a>
