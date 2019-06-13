@@ -1,0 +1,58 @@
+/*.accordion {*/
+/*    background-color: #eee;*/
+/*    color: #444;*/
+/*    cursor: pointer;*/
+/*    padding: 18px;*/
+/*    width: 100%;*/
+/*    border: none;*/
+/*    text-align: left;*/
+/*    outline: none;*/
+/*    font-size: 15px;*/
+/*    transition: 0.4s;*/
+/*}*/
+
+/*.active, .accordion:hover {*/
+/*    background-color: #ccc;*/
+/*}*/
+
+/*.panel {*/
+/*    padding: 0 18px;*/
+/*    background-color: white;*/
+/*    max-height: 0;*/
+/*    overflow: hidden;*/
+/*    transition: max-height 0.2s ease-out;*/
+/*}*/
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Open+Sans:300,400,600');
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul .inner {
+    padding-left: 1em;
+    overflow: hidden;
+    display: none;
+}
+ul .inner.show {
+    /*display: block;*/
+}
+ul li {
+    margin: .5em 0;
+}
+ul li a.toggle {
+    width: 100%;
+    display: block;
+    background: rgba(0, 0, 0, 0.78);
+    color: #fefefe;
+    padding: .75em;
+    border-radius: 0.15em;
+    transition: background .3s ease;
+}
+ul li a.toggle:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
