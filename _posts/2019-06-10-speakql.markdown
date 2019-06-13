@@ -1,0 +1,87 @@
+---
+layout: post
+comments: true
+title:  "Just Speak SQL"
+date:   2019-06-10 18:19:32 -0700
+categories: research
+author: Vraj Shah
+---
+
+This a post about my SIGMOD 2019 [paper](https://adalabucsd.github.io/papers/2019_SpeakQL_SIGMOD.pdf) titled Demonstration of SpeakQL: Speech-driven Multimodal Querying of Structured Data. It is co-authored with Side Li, Kevin Yang, Arun Kumar, and Lawrence Saul.
+
+
+Introduction
+============================
+
+SQL is the standard language for communicating with the relational data. Users in several domains such as enterprise, healthcare, and web are familiar with SQL and use it on a daily basis. There exist many prior work that looks at creating natural lanugage interfaces (NLIs) or visual interfaces in order to allow non-technical users query their data. However, these works complete ignore the SQL knowledge of many users. As shown in the image below, there exist users along an entire spectrum of expertise. Besides expert SQL wizards and lay users there are many people such as analysts, nurse informaticists and managers who are comfortable with basic SQL and perform mostly read-only queries.
+
+<div align="center" markdown="1">
+![SpeakQL Users]({{site.baseurl}}/assets/2019-06-10-speakql/speakql_fig1.png)
+</div>
+
+
+We spoke with many users in industry and found that they often desire anytime and anywhere access to their data. However, typing SQL is really painful in mobile envirnomnets such as smartphones and tablets. Having a speech-driven querying system on their smartphones/tablets that exploits both speech and touch capabilities will help them specify queries faster. To emphasize on the point about why would anyone speak SQL and not use NLIs?, SQL has many advantages that practitioners find useful. For instance, SQL offers lack of ambiguity due to its unambiguous context-free grammar (CFG) and a high-level of query sophistication. Most importantly, with SQL the users know that the results will match their query. In contrast, natural language does not offer any such gurantees.
+
+
+In this work, as the very first step, we build a spoken querying system for a subset of SQL. We call this SpeakQL, which is an end-to-end speech-driven system that allows users to dictate an SQL query, perform interactive query correction using speech/touch, and finally the user can see the results of their query on their screen.   
+
+
+Technical Challenges
+============================
+
+In contrast to English speech, the SQL speech offers several interesting technical challenges such as following. <br/>
+
+1. SQL contains only 3 kinds of tokens: Keywords, Special Characters and Literals. SQL Keywords (such as SELECT, FROM etc.) and Special Characteres  (such as * , = etc.) are from a finite set. On the other hand, a literal can be a table name, an attribute name or an attribute value. Table names and attribute names have a finite vocabulary but the attribute value can be any value from the database or any generic value. Hence, SQL offers infinite types of literal instances, such as *CUSTID_1729A*. Since such tokens are not present in any automatic speech recognition (ASR) engine's vocabulary, they are typically split into set of multiple tokens or not get recognized at all. Such out-of- vocabulary tokens are more likely in SQL than natural English. We call this the unbounded vocabulary problem, and it presents a us with a major technical challenge.
+
+2. Even for in-vocabulary tokens, ASR is bound to make mistakes due to homophones. SQL Keywords or Special Characters are often converted to literals or vice versa. For instance, a keyword "sum" is recognized as literal "some".
+
+
+We tried out with many existing ASR tools such as Google's Cloud Speech API, Amazon's Transcribe, Azure's Custome Speech Service, Baidu's DeepSpeech 2, Facebook's wav2letter and couple of others. We found that these tools (except Azure's Custom Speech) does not capture the vocabulary of the underlying application and hence their accuracy for non-standard English words is extremely low. Achieving real-time latency is another major concern for us. For instance, Amazon Transcribe take nearly 8s to transcribe a 20 sec audio that is completely unacceptable. Overall, we found that Azure's Custom Speech Service that allows us to customize the language model of ASR worked best for us.
+
+
+
+Our Contributions
+============================
+
+To tackle the above challenges, we present the following 4-component architecture.
+
+<div align="center" markdown="1">
+![SpeakQL Architecture]({{site.baseurl}}/assets/2019-06-10-speakql/speakql_fig2.png)
+</div>
+
+Our most important design decision is to decompose the problem of correcting ASR transcription errors into two tasks, *structure determination* and *literal determination*.  *This architectural decoupling lets us effectively tackle the unbounded vocabulary problem.* I discuss the high-level intuitions of the componenets below.
+
+**Structure determination.**  Processes the ASR output to obtain a syntactically correct SQL statement with placeholder variables for Literals, while Keywords and Special Characters are fixed.  It leverages the underlying rich structure of SQL using its CFG to generate many possible SQL structures. A SQL structure is a syntactically correct SQL string obtained from our SQL grammar by applying the production rules recursively. These structures are index using trie data structure. We propose a similarity search algorithm (dynamic programming on tries) that exploits SQL-specific properties to identify the closest matching structure.
+
+
+<div align="center" markdown="1">
+![Structure Determination Component]({{site.baseurl}}/assets/2019-06-10-speakql/speakql_fig3.png)
+</div>
+
+
+**Literal determination.**  Identifies the literals for the placeholder variables. We make several observations about how ASR fails to generate correct transcription.  Consider 2 design choices below. <br>
+
+1. ASR messes up when transcribing a number spoken with pauses. "forty five thousand three hundred ten" is transcribed as "45000 310". This makes us realize that literal determination compoent should be made aware of the splitting of tokens into sub-tokens, so that it can decide when and how to merge these sub-tokens. <br>
+
+2. Homophony is a big challenge for an ASR to overcome. Hence, we consider a similarity search on a pre-computed phonetic representation of the existing Literals in the database. This helps us diambiguate between the words sounding similar. <br>
+
+
+**Interactive Interface.**  
+
+
+Evaluation through user studies
+============================
+
+
+
+Concluding Remarks
+============================
+
+This project is our first step in making speech-driven querying of structured data effective and efficient. Our techniques are inspired from disparate literatures such as database systems, natural language processing, information retrieval, and human-computer interaction. Overall, we found that SpeakQL's unique multimodal design allows users to compose queries significantly faster and reduces their touch effort in specifying or correcting the query.
+
+
+A demonstration video of SpeakQL (created for the user study) can be found below.
+
+<div align="center" markdown="1">
+<iframe width="720" height="415" src="https://vimeo.com/295693078" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
