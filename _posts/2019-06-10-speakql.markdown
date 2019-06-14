@@ -66,7 +66,11 @@ Our most important design decision is to decompose the problem of correcting ASR
 2. Homophony is a big challenge for an ASR to overcome. Hence, we consider a similarity search on a pre-computed phonetic representation of the existing Literals in the database. This helps us diambiguate between the words sounding similar. <br>
 
 
-**Interactive Interface.**  
+**Interactive Interface.**  provides a touch-based interface for users to dictate SQL queries and interactively correct them. The motivation behind it is simple. We want the tool to 1. be intuitive enough to perform/adjust dictation and 2. accelerate the process of correcting queries. In terms of dictation support, users can click the large record button to start/stop dictations. If needed, users can also dictate the queries on the clause level. To speed up the interactive correction, we devise a novel SQL keyboard that's suitable for a quick in-place editing of stray incorrect tokens, present anywhere in the SQL query string. The keyboard consists of frequently used SQL keywords, attribute names as well as Date selection. If our system fails to identify a phonetically ambiguous word, users can still type it up with the help of auto completion.
+
+<div align="center" markdown="1">
+![Interactive Interface Component]({{site.baseurl}}/assets/2019-06-10-speakql/speakql_fig4.png)
+</div>
 
 
 Evaluation through user studies
