@@ -103,7 +103,7 @@ This project is our first step in making speech-driven querying of structured da
 A demonstration video of SpeakQL (created for the user study) can be found below.
 
 <div align="center" markdown="1">
-<iframe width="720" height="415" src="https://youtu.be/rizCGq5O1KY"></iframe>
+<iframe width="720" height="415" src="https://www.youtube.com/embed/rizCGq5O1KY"></iframe>
 </div>
 
 
