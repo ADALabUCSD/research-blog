@@ -2,9 +2,9 @@
 layout: post
 comments: true
 title:  "Just Speak SQL"
-date:   2019-06-10 18:19:32 -0700
+date:   2019-06-18 18:19:32 -0700
 categories: research
-author: Vraj Shah
+author: Vraj Shah and Side Li
 ---
 
 This a post regaring our project [SpeakQL](https://adalabucsd.github.io/speakql.html). SpeakQL will appear in the demonstration track at SIGMOD 2019. The paper titled Demonstration of SpeakQL: Speech-driven Multimodal Querying of Structured Data is available [here](https://adalabucsd.github.io/papers/2019_SpeakQL_SIGMOD.pdf). It is co-authored with Side Li, Kevin Yang, Arun Kumar, and Lawrence Saul.
@@ -92,10 +92,9 @@ Evaluation through user studies
 We conducted a user study by recruiting 15 participants familiar with SQL. We include Select-Project-Join-Aggregate queries. Each participant composed 12 queries on a tablet device and performed two task: (1) In the first task, they had access to SpeakQL Interface which allowed them dictate SQL queries perform interactive correction with touch/speech and (2) In the second task, they typed the query from scratch with no access to our interface. The speedup in time across 12 queries is provided below. We notice that SpeakQL leads to significantly higher speedup in time to completion, an average of 2.7x and up to 6.7x than raw typing SQL queries. 
 
 
-<div align="center" markdown="1">
-![User Study]({{site.baseurl}}/assets/2019-06-10-speakql/user_study.png)
-</div>
-
+<p style="text-align:center;">
+<img src="{{site.baseurl}}/assets/2019-06-12-cerebro/user_study.png" width="700" alt="asd">
+</p>
 
 Concluding Remarks
 ============================
