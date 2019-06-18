@@ -93,7 +93,7 @@ We conducted a user study by recruiting 15 participants familiar with SQL. We in
 
 
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/2019-06-12-cerebro/user_study.png" width="700" alt="asd">
+<img src="{{site.baseurl}}/assets/2019-06-10-speakql/user_study.png" width="700" alt="asd">
 </p>
 
 Concluding Remarks
