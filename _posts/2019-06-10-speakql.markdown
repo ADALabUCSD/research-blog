@@ -23,9 +23,10 @@ Speech recognition engines are becoming really powerful today as we witness a wi
 
 For the database world, "typed" SQL is the standard language for communicating with the relational data. Users in several domains such as enterprise, healthcare, and web are familiar with SQL and use it on a daily basis. There are prior work that looks at creating natural lanugage interfaces (NLIs) to allow users query their data in natural language. However, they have completely ignored the SQL knowledge of many users. As shown in the image below, there exist users along an entire spectrum of expertise. Besides expert SQL wizards and lay users there are many people such as analysts, nurse informaticists and managers who are comfortable with basic SQL and perform mostly read-only queries of their data.
 
-<div align="center" markdown="1">
-![SpeakQL Users]({{site.baseurl}}/assets/2019-06-10-speakql/speakql_fig1.png)
-</div>
+
+<p style="text-align:center;">
+<img src="{{site.baseurl}}/assets/2019-06-10-speakql/speakql_fig1.png" width="1000" alt="error">
+</p></div>
 
 
 We spoke with many users in industry and found that they compose ad hoc queries over arbitrary tables and desire unambiguous response to their queries. In addition, they often desire anytime and anywhere access to their data, say via mobile platforms such as smartphones and tablets. However, typing SQL is really painful in such environments. Having a speech-driven querying system on their smartphones/tablets that exploits both speech and touch capabilities will help them specify queries faster. To emphasize on the point about why would anyone speak SQL and not use NLIs?, SQL has many advantages that practitioners find useful. For instance, SQL offers lack of ambiguity due to its unambiguous context-free grammar (CFG) and a high-level of query sophistication. Most importantly, with SQL the users know that the results will match their posed query. In contrast, natural language does not offer any such gurantees.
@@ -65,15 +66,12 @@ To tackle the above challenges, we present the following 4-component architectur
 
 Our most important design decision is to decompose the problem of correcting ASR transcription errors into two tasks, *structure determination* and *literal determination*.  *This architectural decoupling lets us effectively tackle the unbounded vocabulary problem.* I discuss the high-level intuitions of the componenets below.
 
+**ASR engine.** This component processes the recorded spoken SQL query to obtain a transcription output. We use Azure's Custom Speech Service for our ASR. 
+
 **Structure determination.**  Processes the ASR output to obtain a syntactically correct SQL statement with placeholder variables for Literals, while Keywords and Special Characters are fixed.  It leverages the underlying rich structure of SQL using its CFG to generate many possible SQL structures. A SQL structure is a syntactically correct SQL string obtained from our SQL grammar by applying the production rules recursively. These structures are index using trie data structure. We propose a similarity search algorithm (dynamic programming on tries) that exploits SQL-specific properties to identify the closest matching structure.
 
 
-<div align="center" markdown="1">
-![Structure Determination Component]({{site.baseurl}}/assets/2019-06-10-speakql/speakql_fig3.jpg)
-</div>
-
-
-**Literal determination.**  Identifies the literals for the placeholder variables. We make several observations about how ASR fails to generate correct transcription.  Consider 2 design choices below. <br>
+**Literal determination.**  Identifies the literals for the placeholder variables. We create a literal voting algorithm based on our observations about how ASR fails to identify correct literals. <br>
 
 1. ASR messes up when transcribing a number spoken with pauses. "forty five thousand three hundred ten" is transcribed as "45000 310". This makes us realize that literal determination compoent should be made aware of the splitting of tokens into sub-tokens, so that it can decide when and how to merge these sub-tokens. <br>
 
@@ -105,7 +103,7 @@ This project is our first step in making speech-driven querying of structured da
 A demonstration video of SpeakQL (created for the user study) can be found below.
 
 <div align="center" markdown="1">
-<iframe width="720" height="415" src="https://vimeo.com/295693078" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="720" height="415" src="https://vimeo.com/295693078"></iframe>
 </div>
 
 
