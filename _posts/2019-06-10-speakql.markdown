@@ -44,12 +44,7 @@ In contrast to English speech, the SQL speech offers several interesting technic
 
 1. SQL contain only 3 kinds of tokens: Keywords, Special Characters and Literals. SQL Keywords (such as SELECT, FROM etc.) and Special Characteres  (such as * , = etc.) are from a finite set. On the other hand, Literal can be a table name, an attribute name or an attribute value. Table names and attribute names have a finite vocabulary but the attribute value can be any value from the database or any generic value. Thus, SQL offer infinite types of literal instances such as *CUSTID_1729A*. Since such tokens are not present in any automatic speech recognition (ASR) engine's vocabulary, they are typically split into set of multiple tokens or not recognized at all. Such out-of-vocabulary tokens are more likely in SQL than natural English. We call this the unbounded vocabulary problem and it presents us with a major technical challenge.
 
-2. Even for in-vocabulary tokens ASR is bound to make mistakes due to homophones. SQL Keywords or Special Characters are often converted to Literals or vice versa. For instance, a Keyword "sum" is recognized as Literal "some".
-More types of errors can be found in the table below.
-<p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/2019-06-10-speakql/asr_errors.png" width="800" alt="error">
-</p>
-We tried out with many existing ASR tools such as Google's Cloud Speech API, Amazon's Transcribe, Azure's Custome Speech Service, Baidu's DeepSpeech 2, and Facebook's wav2letter. We found that these tools (except Azure's Custom Speech) does not capture the vocabulary of the underlying application and hence their accuracy for non-standard English words is extremely low. 
+2. Even for in-vocabulary tokens ASR is bound to make mistakes due to homophones. SQL Keywords or Special Characters are often converted to Literals or vice versa. For instance, a Keyword "sum" is recognized as Literal "some". More types of errors can be found in the table below. <p style="text-align:center;"> <img src="{{site.baseurl}}/assets/2019-06-10-speakql/asr_errors.png" width="800" alt="error"></p>  We tried out with many existing ASR tools such as Google's Cloud Speech API, Amazon's Transcribe, Azure's Custome Speech Service, Baidu's DeepSpeech 2, and Facebook's wav2letter. We found that these tools (except Azure's Custom Speech) does not capture the vocabulary of the underlying application and hence their accuracy for non-standard English words is extremely low. 
 
 3. Achieving real-time latency is another major concern for us. For instance, Amazon Transcribe took nearly 8s to transcribe a 20 sec audio. This is completely unacceptable for an interactive interface.
 
