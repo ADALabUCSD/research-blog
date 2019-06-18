@@ -21,7 +21,7 @@ Speech recognition engines are becoming really powerful today as we witness a wi
 </div>
 
 
-For the database world, "typed" SQL is the standard language for communicating with the relational data. Users in several domains such as enterprise, healthcare, and web are familiar with SQL and use it on a daily basis. Many prior works have looked at creating natural lanugage interfaces (NLIs) in order to allow users query their data in natural language. However, these works have completely ignored the SQL knowledge of many users. As shown in the image below, there exist users along an entire spectrum of expertise. Besides expert SQL wizards and lay users there are many people such as analysts, nurse informaticists and managers who are comfortable with basic SQL and perform mostly read-only queries of their data.
+For the database world, "typed" SQL is the standard language for communicating with the relational data. Users in several domains such as enterprise, healthcare, and web are familiar with SQL and use it on a daily basis. There are prior work that looks at creating natural lanugage interfaces (NLIs) to allow users query their data in natural language. However, they have completely ignored the SQL knowledge of many users. As shown in the image below, there exist users along an entire spectrum of expertise. Besides expert SQL wizards and lay users there are many people such as analysts, nurse informaticists and managers who are comfortable with basic SQL and perform mostly read-only queries of their data.
 
 <div align="center" markdown="1">
 ![SpeakQL Users]({{site.baseurl}}/assets/2019-06-10-speakql/speakql_fig1.png)
@@ -93,7 +93,7 @@ We conducted a user study by recruiting 15 participants familiar with SQL. We in
 
 
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/2019-06-10-speakql/user_study.png" width="700" alt="asd">
+<img src="{{site.baseurl}}/assets/2019-06-10-speakql/user_study.png" width="1400" alt="error">
 </p>
 
 Concluding Remarks
