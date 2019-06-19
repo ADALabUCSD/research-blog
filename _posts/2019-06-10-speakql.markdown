@@ -80,7 +80,7 @@ Our most important design decision is to decompose the problem of correcting ASR
 </div>
 
 
-Evaluation through user studies
+Evaluation through User Study
 ============================
 We conduct a user study by recruiting 15 participants familiar with SQL. We include Select-Project-Join-Aggregate queries. Each participant composed 12 queries on a tablet device and performed two task: (1) In the first task, they had access to SpeakQL Interface which allowed them dictate SQL queries perform interactive correction with touch/speech and (2) In the second task, they typed the query from scratch with no access to our interface. The speedup in time and user effort across 12 queries is provided below. We notice that SpeakQL leads to significantly higher speedup in time to completion, an average of 2.7x and up to 6.7x than raw typing SQL queries. Moreover, with SpeakQL’s multimodal interface, the user touch effort to specify and/or correct the query goes down by a factor of average 10x and up to 60x compared to raw typing.
 
@@ -92,7 +92,7 @@ We conduct a user study by recruiting 15 participants familiar with SQL. We incl
 Concluding Remarks
 ============================
 
-Overall, we found that SpeakQL's unique multimodal design allows users to compose queries significantly faster and reduces their touch effort in specifying or correcting the query. Our techniques are inspired from disparate literatures such as database systems, natural language processing, information retrieval, and human-computer interaction. We to build an end-to-end system adapting these techniques to the context of spoken SQL based on the syntactic and semantic properties of SQL queries. This project is our first step in making speech-driven querying of structured data effective and efficient. 
+Overall, we found that SpeakQL's unique multimodal design allows users to compose queries significantly faster and reduces their touch effort in specifying or correcting the query. Our techniques are inspired from disparate literatures such as database systems, natural language processing, information retrieval, and human-computer interaction. We build an end-to-end system adapting these techniques to the context of spoken SQL based on the syntactic and semantic properties of SQL queries. This project is our first step in making speech-driven querying of structured data effective and efficient. 
 
 A demonstration video of SpeakQL (created for the user study) can be found below.
 
