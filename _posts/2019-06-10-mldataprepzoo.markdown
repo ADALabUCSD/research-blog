@@ -35,21 +35,21 @@ To bridge this semantic gap, we cast this data prep task as an ML classification
 <p style="text-align:center;">
 <img src="{{site.baseurl}}/assets/2019-06-20-sortinghat/4things.png" width="800" alt="error">
 </p>
-## Label Vocabulary
+### Label Vocabulary ###
 
 There is usually not enough information in just the raw data file to identify the class (numeric or categorical ) correctly. Consider the following example. 
 <img src="{{site.baseurl}}/assets/2019-06-20-sortinghat/vocabulary.png" width="800" alt="error">
 (1) *Income* is actually a numeric feature but some of its values have a string prefix, which requires extraction of values. (2) *CustID* is unique for every customer, hence it can not be generalized for ML. (3) Inspecting only the column *XYZ*, it is difficult to decide if the feature is numeric or categorical. Thus, we created an intuitive 5-class prediction vocabulary by considering 3 more classes to captures different variety of columns.
-## Features
+## Features ###
 We replicate the human-level intuition into ML models by extracting signals from the raw CSV files that a human reader would look at. Given a column, to identify the feature type, a human reader would look at the attribute (or column) name, some sample values in the column and even descriptive statistics about the column such as the number of NaNs or number of distinct values. For instance, just by inspecting the attribute name such as *ZipCode*, an interpretable string, a human would know that the feature type is categorical. We extract these signals from the raw column and we summarize them in a feature set, which we use to build popular ML models.
 <img src="{{site.baseurl}}/assets/2019-06-20-sortinghat/features.png" width="800" alt="error">
-## Labeled Dataset
+## Labeled Dataset ###
 We obtain over 360 real datasets from several sources such as Kaggle and UCI ML Repo. Each column of the CSV file is just one example for our ML task. We collected over 9000 such examples and manually labeled them into either of the classes. This process took about 75 man hours across 4 months. 
 
-## ML models
+## ML models ###
 We use our feature set on our labeled dataset to build ML models. We compare several ML approaches such as logistic regression, support vector machine with radial basis kernel, Random Forest, k-nearest neighbor (k-NN) and a character-level convolutional neural model. The architecture of the neural model is shown below.
 <img src="{{site.baseurl}}/assets/2019-06-20-sortinghat/cnn.png" width="800" alt="error">
-## Results
+## Results ###
 
 We compare our approach with the existing tools: TFDV and Pandas. TFDV is a tool for managing ML-related data in TensorFlow Extended. It uses heuristic rules to infer ML feature types. Python Pandas can only infer syntactic types: int, float, and object. Hence, we can not use our 5-class vocabulary for comparison. Instead, we reduce the number of classes and report the results on numeric vs. non-numeric. We notice a massive lift of 30% in accuracy for our approach against both TF-DV and Pandas.
 <p style="text-align:center;">
