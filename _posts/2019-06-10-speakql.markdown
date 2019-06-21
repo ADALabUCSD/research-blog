@@ -7,7 +7,7 @@ categories: research
 author: Vraj Shah and Side Li
 ---
 
-This a post regarding our project [SpeakQL](https://adalabucsd.github.io/speakql.html). SpeakQL will appear at SIGMOD 2019 in the demonstration track. The paper titled *Demonstration of SpeakQL: Speech-driven Multimodal Querying of Structured Data* is available [here](https://adalabucsd.github.io/papers/2019_SpeakQL_SIGMOD.pdf). It is co-authored with Side Li, Kevin Yang, Arun Kumar, and Lawrence Saul.
+This post is regarding our project [SpeakQL](https://adalabucsd.github.io/speakql.html). SpeakQL will appear at SIGMOD 2019 in the demonstration track. The paper titled *Demonstration of SpeakQL: Speech-driven Multimodal Querying of Structured Data* is available [here](https://adalabucsd.github.io/papers/2019_SpeakQL_SIGMOD.pdf). It is co-authored with Side Li, Kevin Yang, Arun Kumar, and Lawrence Saul.
 
 
 Introduction
