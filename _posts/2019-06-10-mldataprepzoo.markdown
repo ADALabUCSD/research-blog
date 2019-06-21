@@ -10,8 +10,7 @@ author: Vraj Shah
 This post is about our new line of project(s) that aims to automate data preparation (prep) for ML. I'm presenting a workshop [paper](https://adalabucsd.github.io/papers/2019_DataPrepZoo_DEEM.pdf) at DEEM, SIGMOD 2019 titled *The ML Data Prep Zoo: Towards Semi-Automatic Data Preparation for ML*. It is co-authored with my advisor, Arun Kumar.
 
 
-Introduction
-============================
+## Introduction ##
 
 Data preparation (prep) still remains a major bottleneck for building any real-world ML application. Several surveys of data science practitioners have shown that the time spent in data prep can go as high as 80% of their time. Cloud companies have released AutoML platforms such as Google's AutoML Tables and Salesforce's Einstein that automates the entire ML pipeline, everything from preparing the data, picking the right features, choosing ML algorithms, to tuning the knobs of these algorithms. Unfortunately, there does not exist any benchmarks to quantify the goodness of automation for data prep in these AutoML platforms. This would require formalizing the major data prep steps and create benchmark labeled datasets to standardize their evaluation.  
 <img src="{{site.baseurl}}/assets/2019-06-20-sortinghat/automl.png" width="800" alt="error">
@@ -25,8 +24,7 @@ In this line of project(s), we aim to objectively quantify the key data prep tas
 </p>
 
 
-Case Study: ML Feature Type Inference
-============================
+## Case Study: ML Feature Type Inference ##
 
 The very first data prep step is to infer the ML feature types (or the ML schema) from the DB schema. For instance, *age* is a numeric feature and *zipcode* is categorical. Attributes such as time since and income have numbers embedded in them, which requires some form of extraction to be useful as a feature.  This task is hard to be automated because there exists a semantic gap between the DB schema and the ML schema. The DB schema is syntactic: it tells us the data type of a column such as an integer, real, or string. On the other hand, the ML schema is semantic: it tells us what type of feature a column is. For instance, *ZipCodes* are usually stored as integers, but it is a categorical feature. However, a syntactic tool like Python Pandas will treat it as a numeric feature, which can lead to nonsensical results.
 <img src="{{site.baseurl}}/assets/2019-06-20-sortinghat/semantic_gap.png" width="800" alt="error"> 
@@ -61,12 +59,13 @@ The overall classification accuracy on the complete 5-class vocabulary is given 
 <img src="{{site.baseurl}}/assets/2019-06-20-sortinghat/leaderboard.png" width="800" alt="error">
 </p>
 
-ML Data Prep Zoo Announcement
-============================
+
+## ML Data Prep Zoo Announcement ##
+
 We announce a live public repository for common ML data prep tasks [here](https://github.com/pvn25/ML-Data-Prep-Zoo). We plan to release labeled datasets, ML models and Python libraries for the defined data prep tasks. For Task 0, we have already released raw dataset, labeled dataset, pre-trained models and python library for using the model. The repository also includes a leaderboard for public competition on the hosted dataset. We invite practitioners and researchers to use our datasets to create better featurization, models and report their results to the leaderboard. Moreover, we invite contributions to define new tasks along with their own labeled data and models.
 
 
-Conclusions
-============================
+## Conclusions ##
+
 We envision a community-driven effort for semi-automating data prep based on the philosophy: *Formalize data prep tasks as applied ML tasks and create benchmark labeled datasets.* Our case study on the ML feature type inference task shows that our applied ML approach can lead to substantial boost in accuracy against existing approaches. We invite you to read our full technical [report](https://adalabucsd.github.io/papers/TR_2019_SortingHat.pdf). Feel free to reach us for any questions, suggestions, and/or comments.
 
