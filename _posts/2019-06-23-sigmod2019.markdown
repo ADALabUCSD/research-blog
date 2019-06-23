@@ -24,7 +24,7 @@ I will shortly offer vignettes on all of our papers. But we first start with a b
 ADA Lifecycle and our SIGMOD Presence
 ======================================
 
-As illustrated below and elaborated <a href="https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1366" target=_blank>in a recent textbook I co-authored</a>, I split the ADA/ML application lifecycle into three main stages: Source, Build, and Deploy.
+As illustrated below and elaborated [in a recent textbook I co-authored](https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1366 ), we split the ADA/ML application lifecycle into three main stages: Source, Build, and Deploy.
 
 <div align="center" markdown="1" width="500">
 ![ADA Lifecyle]({{site.baseurl}}/assets/2019-06-23-sigmod2019/ADALab.jpg)
@@ -57,56 +57,56 @@ Data preparation (prep) time is a major bottleneck for ML, especially on structu
 
 Labeled datasets are becoming commodities traded via data markets. While current markets focus only on selling data, we envision markets selling ML models trained on commercial labeled data to enable new accuracy-price tradeoffs for buyers and to let sellers reach new customer segments. This paper presents the formal foundations and the first practical mechanisms for such "model-based pricing" of data. We believe such a market can obviate the Source stage for some non-technical ML users because after all, data is sometimes only a means to an end in an ML application.<br/>
 
-<i>Collaborator</i>: Paris Koutris (UW-Madison).<br/><br/>
+<i>Collaborator</I>: Paris Koutris (UW-Madison).<br/><br/>
 
 
 <b>Tuple-Oriented Compression (TOC)</b>. [Paper](https://adalabucsd.github.io/papers/2019_TOC_SIGMOD.pdf).<br/>
 
 Data compression and compressed query execution is common in columnar RDBMSs. But little work has studied the potential of such execution for ML training "queries." This paper offers the first compression scheme tailored to the access patterns of mini-batch SGD-based ML. Inspired by LZW text compression, it presents new data structures and compressed execution algorithms that offer significant runtime speedups for the Build stage. As dataset sizes keep growing, we believe compressed ML execution will become more common in ML systems.<br/>
 
-<b>Collaborators</b>: Jignesh Patel (UW-Madison), Jeff Naughton (Google), and Xi Wu (Google).<br/>
+<I>Collaborators</I>: Jignesh Patel (UW-Madison), Jeff Naughton (Google), and Xi Wu (Google).<br/>
 
-<b>Blog post</b>: The SIGARCH folks beat us to the punch with [this gracious post](https://www.sigarch.org/hardware-acceleration-opportunities-for-machine-learning-on-massive-datasets)!<br/>
+<i>Blog post</I>: The SIGARCH folks beat us to the punch with [this gracious post](https://www.sigarch.org/hardware-acceleration-opportunities-for-machine-learning-on-massive-datasets)!<br/>
 
-<b>Fun fact</b>: This is the 4th version following rejects from VLDB'17, SIGMOD'17, and ICML'18. Fengan's work is an inspirational study in persistence!<br/><br/>
+<I>Fun fact</I>: This is the 4th version following rejects from VLDB'17, SIGMOD'17, and ICML'18. Fengan's work is an inspirational study in persistence!<br/><br/>
 
 
 <b>MorpheusFI</b>. [Paper](https://adalabucsd.github.io/papers/2019_MorpheusFI_SIGMOD.pdf). [Project webpage](https://adalabucsd.github.io/morpheus.html).<br/>
 
 Relational datasets are often multi-table but most ML tools assume single-table inputs. This forces ML users to materialize joins, wasting resources and slowing analysis. "Factorized ML" avoids this by pushing ML through joins; Morpheus generalized this idea to any ML procedure written in bulk linear algebra but it is limited by linearity over features. This paper generalizes Morpheus to support non-linear feature interactions in factorized linear algebra. It accelerates the Build stage by optimizing two common feature engineering operations in statistical ML.<br/>
 
-<b>Fun fact</b>: Born out of Side's BS honors project, this is the first ever paper at SIGMOD by a UCSD undergrad!<br/>
+<i>Fun fact</I>: Born out of Side's BS honors project, this is the first ever paper at SIGMOD by a UCSD undergrad!<br/>
 
-<b>Impact</b>: Side's Python tool was explored for production use by a Russian e-commerce company.<br/><br/>
+<I>Impact</I>: Side's Python tool was explored for production use by a Russian e-commerce company.<br/><br/>
 
 
 <b>Cerebro</b>. [Paper](https://adalabucsd.github.io/papers/2019_Cerebro_DEEM.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html).<br/>
 
 Training deep nets requires a highly empirical model selection process to configure data representation, model architecture, and hyper-parameters. ML users often try dozens of configurations. Alas, most ML systems focus on scaling only one training configuration at a time, wasting system resources and/or sacrificing reproducibility. This paper presents a new SGD-oriented parallelism paradigm to raise the resource efficiency of this process while ensuring reproducibility. We believe it can help democratize the Build stage of deep learning.<br/>
 
-<b>Blog post</b>: Supun and Yuhao talk more about Cerebro in [this post](https://adalabucsd.github.io/research-blog/cerebro.html).<br/>
+<I>Blog post</I>: Supun and Yuhao talk more about Cerebro in [this post](https://adalabucsd.github.io/research-blog/cerebro.html).<br/>
 
-<b>Impact</b>: Pivotal has expressed interest in integrating Cerebro into Greenplum and MADlib.<br/><br/>
+<I>Impact</I>: Pivotal has expressed interest in integrating Cerebro into Greenplum and MADlib.<br/><br/>
 
 
 <b>Krypton</b>. [Paper](https://adalabucsd.github.io/papers/2019_Krypton_SIGMOD.pdf). [Project webpage](https://adalabucsd.github.io/krypton.html).<br/>
 
-Deep CNNs are popular for image analysis in many domains. Due to their black box nature, "explanations" of CNN predictions are often sought by domain users to understand CNN predictions. Occlusion-based explanation (OBE) is a popular mechanism for this. OBE hides patches of the image to re-predict the output and yields a heatmap over the pixels. Alas, OBE is highly compute-intensive. This paper casts OBE as a query optimization problem and presents techniques combining database-inspired optimizations and vision science to make OBE faster.<br/>
+Deep CNNs are popular for image analysis in many domains. Because CNNs are effectively black boxes, "explanations" of their predictions are often sought by many domain users. Occlusion-based explanation (OBE) is a popular mechanism for this purpose. OBE hides patches of the image to re-predict the output and yields a heatmap over the pixels. Alas, OBE is highly compute-intensive. This paper casts OBE as a query optimization problem and presents techniques combining database-inspired optimizations and vision science to make OBE faster. This project is part of our "database perception" vision for the Deploy stage of deep learning for unstructured data.<br/>
 
-<b>Collaborator</b>: Yannis Papakonstantinou (UCSD).<br/>
+<I>Collaborator</I>: Yannis Papakonstantinou (UCSD).<br/>
 
-<b>Blog post</b>: Supun talks more about Krypton in [this post](https://adalabucsd.github.io/research-blog/research/2019/06/07/krypton.html).<br/><br/>
+<I>Blog post</I>: Supun talks more about Krypton in [this post](https://adalabucsd.github.io/research-blog/research/2019/06/07/krypton.html).<br/><br/>
 
 
 <b>SpeakQL</b>. [Demo Paper](https://adalabucsd.github.io/papers/2019_SpeakQL_SIGMOD.pdf). [Project webpage](https://adalabucsd.github.io/speakql.html).<br/>
 
-Automatic speech recognition (ASR) is now highly accurate due to deep learning, raising the popularity of spoken interactions on tablets, smartphones, and conversational assistants. This project studies the implications of this trend for structured data querying on such devices. The first stage focuses on a tractable but useful subset of regular SQL that is aimed at data professionals that seek more flexible anytime-anywhere access to their data. This demo will let the audience play with SpeakQL 1.0 and learn about the challenges in building such a system.<br/>
+Automatic speech recognition (ASR) is now highly accurate due to deep learning, raising the popularity of spoken interactions on tablets, smartphones, and conversational assistants. This project studies the implications of this trend for structured data querying on such devices. The first stage focuses on a tractable but useful subset of regular SQL that is aimed at data professionals that seek more flexible anytime-anywhere access to their data. This demo will let the audience play with SpeakQL 1.0 and learn about the challenges in building such a system. This project is also part of our "database perception" vision for the Deploy stage of deep learning for unstructured data.<br/>
 
-<b>Collaborators</b>: Lawrence Saul (UCSD).<br/>
+<I>Collaborators</I>: Lawrence Saul (UCSD).<br/>
 
-<b>Blog post</b>: Vraj talks more about SpeakQL in <a href="https://adalabucsd.github.io/research-blog/research/2019/06/19/speakql.html" target=_blank>this post</a>.<br/>
+<I>Blog post</I>: Vraj talks more about SpeakQL in <a href="https://adalabucsd.github.io/research-blog/research/2019/06/19/speakql.html" target=_blank>this post</a>.<br/>
 
-<b>Fun fact</b>: The SpeakQL demo includes a competition on who can speak correct SQL fastest. So, bring your A-game database aficionados! :)<br/><br/><br/>
+<I>Fun fact</I>: The SpeakQL demo includes a competition on who can speak correct SQL fastest. So, bring your A-game database aficionados! :)<br/><br/><br/>
 
 
 Overall, I feel incredibly fortunate to work with (or have worked with) such a splendid cohort of creative and productive students. I may be going out on a limb but I believe our presence is likely the largest ever at a SIGMOD/VLDB by an academic's research group. Apart from the hard work of my students and collaborators, another key reason for this is the extra thorough and fair PC process this year thanks to the terrific efforts of Natassa Ailamaki, the PC chair.<br/>
@@ -119,5 +119,4 @@ I would also like to thank all past and present sponsors of ADALab's research. W
 
 Finally, a shout out to our UCSD friends at SIGMOD 2019. Two of Alin Deutsch's students/alumni also have full research papers there: Rana Alotaibi and Vicky Papavasileiou. Rana's paper proposes a new query rewriting mechanism and optimizations for polystore systems. Vicky's paper proposes a new declarative language and mechanisms to capture and query provenance in scalable graph analytics.<br/>
 
-All in all, [UCSD's Database Lab](http://db.ucsd.edu/) has an impressive 6 full research papers at SIGMOD 2019, tied for the highest by an academic database group [see full list here](https://sigmod2019.org/sigmod_research_papers_list). And the tie is with none other than UW-Madison (my alma mater). I am certainly looking forward to the customary group photos with both the UCSD and UW-Madison contingents (armies?) at Amsterdam! :)
-
+All in all, [UCSD's Database Lab](http://db.ucsd.edu/) has an impressive set of 6 full research papers at SIGMOD 2019, tied for the highest by an academic database group [see full list here](https://sigmod2019.org/sigmod_research_papers_list). And we are tied with none other than UW-Madison (my alma mater). I am certainly looking forward to the customary group photos with both the UCSD and UW-Madison contingents (armies?) at Amsterdam! :)
