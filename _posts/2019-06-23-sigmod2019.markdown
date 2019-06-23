@@ -104,7 +104,7 @@ Automatic speech recognition (ASR) is now highly accurate due to deep learning, 
 
 <I>Collaborators</I>: Lawrence Saul (UCSD).<br/>
 
-<I>Blog post</I>: Vraj talks more about SpeakQL in <a href="https://adalabucsd.github.io/research-blog/research/2019/06/19/speakql.html" target=_blank>this post</a>.<br/>
+<I>Blog post</I>: Vraj talks more about SpeakQL in [this post](https://adalabucsd.github.io/research-blog/research/2019/06/19/speakql.html).<br/>
 
 <I>Fun fact</I>: The SpeakQL demo includes a competition on who can speak correct SQL fastest. So, bring your A-game database aficionados! :)<br/><br/><br/>
 
