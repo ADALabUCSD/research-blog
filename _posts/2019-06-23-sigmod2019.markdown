@@ -44,67 +44,67 @@ Overview of ADALab Papers at SIGMOD 2019
 =========================================
 
 
-<b>ML Data Prep Zoo</b>. [Paper](https://adalabucsd.github.io/papers/2019_DataPrepZoo_DEEM.pdf). [Project webpage](https://adalabucsd.github.io/sortinghat.html).<br/><br/>
+<b>ML Data Prep Zoo</b>. [Paper](https://adalabucsd.github.io/papers/2019_DataPrepZoo_DEEM.pdf). [Project webpage](https://adalabucsd.github.io/sortinghat.html).<br/>
 
-Data preparation (prep) time is a major bottleneck for ML, especially on structured data. While emerging AutoML frameworks claim to automate data prep too, the quality of their automation is unclear. This paper presents our vision of a "zoo" of integrated benchmark task definitions for ML data prep, as well as large labeled datasets and pre-trained ML models to (semi-)automate such tasks. We believe our labeled datasets and pre-trained models can help reduce the manual effort of the Source stage, while also helping improve the quality of AutoML frameworks.<br/><br/>
+Data preparation (prep) time is a major bottleneck for ML, especially on structured data. While emerging AutoML frameworks claim to automate data prep too, the quality of their automation is unclear. This paper presents our vision of a "zoo" of integrated benchmark task definitions for ML data prep, as well as large labeled datasets and pre-trained ML models to (semi-)automate such tasks. We believe our labeled datasets and pre-trained models can help reduce the manual effort of the Source stage, while also helping improve the quality of AutoML frameworks.<br/>
 
-<b>Blog post</b>: Vraj explains our vision, including our progress on the first task of ML feature type inference (Project SortingHat), in [this post](https://adalabucsd.github.io/research-blog/research/2019/06/21/mldataprepzoo.html).<br/><br/>
+<b>Blog post</b>: Vraj explains our vision, including our progress on the first task of ML feature type inference (Project SortingHat), in [this post](https://adalabucsd.github.io/research-blog/research/2019/06/21/mldataprepzoo.html).<br/>
 
-<b>Impact</b>: Google has expressed interested in integrating our models with TensorFlow Data Validation.<br/>
-
-
-<b>Nimbus</b>. <a href="https://adalabucsd.github.io/papers/2019_Nimbus_SIGMOD.pdf" target=_blank>Paper</a>. <a href="https://adalabucsd.github.io/nimbus.html" target=_blank>Project webpage</a>.<br/><br/>
-
-Labeled datasets are becoming commodities traded via data markets. While current markets focus only on selling data, we envision markets selling ML models trained on commercial labeled data to enable new accuracy-price tradeoffs for buyers and to let sellers reach new customer segments. This paper presents the formal foundations and the first practical mechanisms for such "model-based pricing" of data. We believe such a market can obviate the Source stage for some non-technical ML users because after all, data is sometimes only a means to an end in an ML application.<br/><br/>
-
-<b>Collaborator</b>: Paris Koutris (UW-Madison).<br/>
+<b>Impact</b>: Google has expressed interested in integrating our models with TensorFlow Data Validation.<br/><br/>
 
 
-<b>Tuple-Oriented Compression (TOC)</b>. <a href="https://adalabucsd.github.io/papers/2019_TOC_SIGMOD.pdf" target=_blank>Paper</a>.<br/><br/>
+<b>Nimbus</b>. [Paper](https://adalabucsd.github.io/papers/2019_Nimbus_SIGMOD.pdf). [Project webpage](https://adalabucsd.github.io/nimbus.html).<br/>
+
+Labeled datasets are becoming commodities traded via data markets. While current markets focus only on selling data, we envision markets selling ML models trained on commercial labeled data to enable new accuracy-price tradeoffs for buyers and to let sellers reach new customer segments. This paper presents the formal foundations and the first practical mechanisms for such "model-based pricing" of data. We believe such a market can obviate the Source stage for some non-technical ML users because after all, data is sometimes only a means to an end in an ML application.<br/>
+
+<b>Collaborator</b>: Paris Koutris (UW-Madison).<br/><br/>
+
+
+<b>Tuple-Oriented Compression (TOC)</b>. [Paper](https://adalabucsd.github.io/papers/2019_TOC_SIGMOD.pdf).<br/>
 
 Data compression and compressed query execution is common in columnar RDBMSs. But little work has studied the potential of such execution for ML training "queries." This paper offers the first compression scheme tailored to the access patterns of mini-batch SGD-based ML. Inspired by LZW text compression, it presents new data structures and compressed execution algorithms that offer significant runtime speedups for the Build stage. As dataset sizes keep growing, we believe compressed ML execution will become more common in ML systems.<br/><br/>
 
-<b>Collaborators</b>: Jignesh Patel (UW-Madison), Jeff Naughton (Google), and Xi Wu (Google).<br/><br/>
+<b>Collaborators</b>: Jignesh Patel (UW-Madison), Jeff Naughton (Google), and Xi Wu (Google).<br/>
 
-<b>Blog post</b>: The SIGARCH folks beat us to the punch with <a href="https://www.sigarch.org/hardware-acceleration-opportunities-for-machine-learning-on-massive-datasets" target=_blank>this gracious post</a>!<br/><br/>
+<b>Blog post</b>: The SIGARCH folks beat us to the punch with <a href="https://www.sigarch.org/hardware-acceleration-opportunities-for-machine-learning-on-massive-datasets" target=_blank>this gracious post</a>!<br/>
 
-<b>Fun fact</b>: This is the 4th version following rejects from VLDB'17, SIGMOD'17, and ICML'18. Fengan's work is an inspirational study in persistence!<br/>
-
-
-<b>MorpheusFI</b>. <a href="https://adalabucsd.github.io/papers/2019_MorpheusFI_SIGMOD.pdf" target=_blank>Paper</a>. <a href="https://adalabucsd.github.io/morpheus.html" target=_blank>Project webpage</a>.<br/><br/>
-
-Relational datasets are often multi-table but most ML tools assume single-table inputs. This forces ML users to materialize joins, wasting resources and slowing analysis. "Factorized ML" avoids this by pushing ML through joins; Morpheus generalized this idea to any ML procedure written in bulk linear algebra but it is limited by linearity over features. This paper generalizes Morpheus to support non-linear feature interactions in factorized linear algebra. It accelerates the Build stage by optimizing two common feature engineering operations in statistical ML.<br/><br/>
-
-<b>Fun fact</b>: Born out of Side's BS honors project, this is the first ever paper at SIGMOD by a UCSD undergrad!<br/><br/>
-
-<b>Impact</b>: Side's Python tool was explored for production use by a Russian e-commerce company.<br/>
+<b>Fun fact</b>: This is the 4th version following rejects from VLDB'17, SIGMOD'17, and ICML'18. Fengan's work is an inspirational study in persistence!<br/><br/>
 
 
-<b>Cerebro</b>. <a href="https://adalabucsd.github.io/papers/2019_Cerebro_DEEM.pdf" target=_blank>Paper</a>. <a href="https://adalabucsd.github.io/cerebro.html" target=_blank>Project webpage</a>.<br/><br/>
+<b>MorpheusFI</b>. <a href="https://adalabucsd.github.io/papers/2019_MorpheusFI_SIGMOD.pdf" target=_blank>Paper</a>. <a href="https://adalabucsd.github.io/morpheus.html" target=_blank>Project webpage</a>.<br/>
 
-Training deep nets requires a highly empirical model selection process to configure data representation, model architecture, and hyper-parameters. ML users often try dozens of configurations. Alas, most ML systems focus on scaling only one training configuration at a time, wasting system resources and/or sacrificing reproducibility. This paper presents a new SGD-oriented parallelism paradigm to raise the resource efficiency of this process while ensuring reproducibility. We believe it can help democratize the Build stage of deep learning.<br/><br/>
+Relational datasets are often multi-table but most ML tools assume single-table inputs. This forces ML users to materialize joins, wasting resources and slowing analysis. "Factorized ML" avoids this by pushing ML through joins; Morpheus generalized this idea to any ML procedure written in bulk linear algebra but it is limited by linearity over features. This paper generalizes Morpheus to support non-linear feature interactions in factorized linear algebra. It accelerates the Build stage by optimizing two common feature engineering operations in statistical ML.<br/>
 
-<b>Blog post</b>: Supun and Yuhao talk more about Cerebro in <a href="https://adalabucsd.github.io/research-blog/cerebro.html" target=_blank>this post</a>.<br/><br/>
+<b>Fun fact</b>: Born out of Side's BS honors project, this is the first ever paper at SIGMOD by a UCSD undergrad!<br/>
 
-<b>Impact</b>: Pivotal has expressed interest in integrating Cerebro into Greenplum and MADlib.<br/>
+<b>Impact</b>: Side's Python tool was explored for production use by a Russian e-commerce company.<br/><br/>
 
 
-<b>Krypton</b>. <a href="https://adalabucsd.github.io/papers/2019_Krypton_SIGMOD.pdf" target=_blank>Paper</a>. <a href="https://adalabucsd.github.io/krypton.html" target=_blank>Project webpage</a>.<br/><br/>
+<b>Cerebro</b>. <a href="https://adalabucsd.github.io/papers/2019_Cerebro_DEEM.pdf" target=_blank>Paper</a>. <a href="https://adalabucsd.github.io/cerebro.html" target=_blank>Project webpage</a>.<br/>
+
+Training deep nets requires a highly empirical model selection process to configure data representation, model architecture, and hyper-parameters. ML users often try dozens of configurations. Alas, most ML systems focus on scaling only one training configuration at a time, wasting system resources and/or sacrificing reproducibility. This paper presents a new SGD-oriented parallelism paradigm to raise the resource efficiency of this process while ensuring reproducibility. We believe it can help democratize the Build stage of deep learning.<br/>
+
+<b>Blog post</b>: Supun and Yuhao talk more about Cerebro in <a href="https://adalabucsd.github.io/research-blog/cerebro.html" target=_blank>this post</a>.<br/>
+
+<b>Impact</b>: Pivotal has expressed interest in integrating Cerebro into Greenplum and MADlib.<br/><br/>
+
+
+<b>Krypton</b>. <a href="https://adalabucsd.github.io/papers/2019_Krypton_SIGMOD.pdf" target=_blank>Paper</a>. <a href="https://adalabucsd.github.io/krypton.html" target=_blank>Project webpage</a>.<br/>
 
 Deep CNNs are popular for image analysis in many domains. Due to their black box nature, "explanations" of CNN predictions are often sought by domain users to understand CNN predictions. Occlusion-based explanation (OBE) is a popular mechanism for this. OBE hides patches of the image to re-predict the output and yields a heatmap over the pixels. Alas, OBE is highly compute-intensive. This paper casts OBE as a query optimization problem and presents techniques combining database-inspired optimizations and vision science to make OBE faster.<br/><br/>
 
-<b>Collaborator</b>: Yannis Papakonstantinou (UCSD).<br/><br/>
+<b>Collaborator</b>: Yannis Papakonstantinou (UCSD).<br/>
 
-<b>Blog post</b>: Supun talks more about Krypton in <a href="https://adalabucsd.github.io/research-blog/research/2019/06/07/krypton.html" target=_blank>this post</a>.<br/>
+<b>Blog post</b>: Supun talks more about Krypton in <a href="https://adalabucsd.github.io/research-blog/research/2019/06/07/krypton.html" target=_blank>this post</a>.<br/><br/>
 
 
-<b>SpeakQL</b>. <a href="https://adalabucsd.github.io/papers/2019_SpeakQL_SIGMOD.pdf" target=_blank>Paper</a>. <a href="https://adalabucsd.github.io/speakql.html" target=_blank>Project webpage</a>.<br/><br/>
+<b>SpeakQL</b>. <a href="https://adalabucsd.github.io/papers/2019_SpeakQL_SIGMOD.pdf" target=_blank>Paper</a>. <a href="https://adalabucsd.github.io/speakql.html" target=_blank>Project webpage</a>.<br/>
 
-Automatic speech recognition (ASR) is now highly accurate due to deep learning, raising the popularity of spoken interactions on tablets, smartphones, and conversational assistants. This project studies the implications of this trend for structured data querying on such devices. The first stage focuses on a tractable but useful subset of regular SQL that is aimed at data professionals that seek more flexible anytime-anywhere access to their data. This demo will let the audience play with SpeakQL 1.0 and learn about the challenges in building such a system.<br/><br/>
+Automatic speech recognition (ASR) is now highly accurate due to deep learning, raising the popularity of spoken interactions on tablets, smartphones, and conversational assistants. This project studies the implications of this trend for structured data querying on such devices. The first stage focuses on a tractable but useful subset of regular SQL that is aimed at data professionals that seek more flexible anytime-anywhere access to their data. This demo will let the audience play with SpeakQL 1.0 and learn about the challenges in building such a system.<br/>
 
-<b>Collaborators</b>: Lawrence Saul (UCSD).<br/><br/>
+<b>Collaborators</b>: Lawrence Saul (UCSD).<br/>
 
-<b>Blog post</b>: Vraj talks more about SpeakQL in <a href="https://adalabucsd.github.io/research-blog/research/2019/06/19/speakql.html" target=_blank>this post</a>.<br/><br/>
+<b>Blog post</b>: Vraj talks more about SpeakQL in <a href="https://adalabucsd.github.io/research-blog/research/2019/06/19/speakql.html" target=_blank>this post</a>.<br/>
 
 <b>Fun fact</b>: The SpeakQL demo includes a competition on who can speak correct SQL fastest. So, bring your A-game database aficionados! :)<br/><br/><br/>
 
