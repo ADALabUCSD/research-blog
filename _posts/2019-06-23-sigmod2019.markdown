@@ -48,16 +48,16 @@ Overview of ADALab Papers at SIGMOD 2019
 
 Data preparation (prep) time is a major bottleneck for ML, especially on structured data. While emerging AutoML frameworks claim to automate data prep too, the quality of their automation is unclear. This paper presents our vision of a "zoo" of integrated benchmark task definitions for ML data prep, as well as large labeled datasets and pre-trained ML models to (semi-)automate such tasks. We believe our labeled datasets and pre-trained models can help reduce the manual effort of the Source stage, while also helping improve the quality of AutoML frameworks.<br/>
 
-<b>Blog post</b>: Vraj explains our vision, including our progress on the first task of ML feature type inference (Project SortingHat), in [this post](https://adalabucsd.github.io/research-blog/research/2019/06/21/mldataprepzoo.html).<br/>
+<i>Blog post</I>: Vraj explains our vision, including our progress on the first task of ML feature type inference (Project SortingHat), in [this post](https://adalabucsd.github.io/research-blog/research/2019/06/21/mldataprepzoo.html).<br/>
 
-<b>Impact</b>: Google has expressed interested in integrating our models with TensorFlow Data Validation.<br/><br/>
+<I>Impact</I>: Google has expressed interested in integrating our models with TensorFlow Data Validation.<br/><br/>
 
 
-<b>Nimbus</b>. [Paper](https://adalabucsd.github.io/papers/2019_Nimbus_SIGMOD.pdf). [Demo Paper](https://adalabucsd.github.io/papers/2019_NimbusDemo_SIGMOD.pdf) [Project webpage](https://adalabucsd.github.io/nimbus.html).<br/>
+<b>Nimbus</b>. [Paper](https://adalabucsd.github.io/papers/2019_Nimbus_SIGMOD.pdf). [Demo Paper](https://adalabucsd.github.io/papers/2019_NimbusDemo_SIGMOD.pdf). [Project webpage](https://adalabucsd.github.io/nimbus.html).<br/>
 
 Labeled datasets are becoming commodities traded via data markets. While current markets focus only on selling data, we envision markets selling ML models trained on commercial labeled data to enable new accuracy-price tradeoffs for buyers and to let sellers reach new customer segments. This paper presents the formal foundations and the first practical mechanisms for such "model-based pricing" of data. We believe such a market can obviate the Source stage for some non-technical ML users because after all, data is sometimes only a means to an end in an ML application.<br/>
 
-<b>Collaborator</b>: Paris Koutris (UW-Madison).<br/><br/>
+<i>Collaborator</i>: Paris Koutris (UW-Madison).<br/><br/>
 
 
 <b>Tuple-Oriented Compression (TOC)</b>. [Paper](https://adalabucsd.github.io/papers/2019_TOC_SIGMOD.pdf).<br/>
@@ -109,16 +109,15 @@ Automatic speech recognition (ASR) is now highly accurate due to deep learning, 
 <b>Fun fact</b>: The SpeakQL demo includes a competition on who can speak correct SQL fastest. So, bring your A-game database aficionados! :)<br/><br/><br/>
 
 
-Overall, I feel incredibly fortunate to work with (or have worked with) such a splendid cohort of creative and productive students. I may be going out on a limb but I believe our presence is likely the largest ever at a SIGMOD/VLDB by an academic's research group. Apart from the hard work of my students and collaborators, another key reason for this is the extra thorough and fair PC process this year thanks to the terrific efforts of Natassa Ailamaki, the PC chair.<br/><br/>
+Overall, I feel incredibly fortunate to work with (or have worked with) such a splendid cohort of creative and productive students. I may be going out on a limb but I believe our presence is likely the largest ever at a SIGMOD/VLDB by an academic's research group. Apart from the hard work of my students and collaborators, another key reason for this is the extra thorough and fair PC process this year thanks to the terrific efforts of Natassa Ailamaki, the PC chair.<br/>
 
 I would also like to thank all past and present sponsors of ADALab's research. We are firing on all cylinders in our quest to better understand, characterize, and improve all stages of the ADA lifecycle. Watch this space for both more research publications and more software/dataset releases from us in the near future.
 
 <div align="center" markdown="1">
 ![ADA Lifecyle]({{site.baseurl}}/assets/2019-06-23-sigmod2019/ADALabSponsors.jpg)
 </div>
-<br/>
 
-Finally, a shout out to our UCSD friends at SIGMOD 2019. Two of Alin Deutsch's students/alumni also have full research papers there: Rana Alotaibi and Vicky Papavasileiou. Rana's paper proposes a new query rewriting mechanism and optimizations for polystore systems. Vicky's paper proposes a new declarative language and mechanisms to capture and query provenance in scalable graph analytics.<br/><br/>
+Finally, a shout out to our UCSD friends at SIGMOD 2019. Two of Alin Deutsch's students/alumni also have full research papers there: Rana Alotaibi and Vicky Papavasileiou. Rana's paper proposes a new query rewriting mechanism and optimizations for polystore systems. Vicky's paper proposes a new declarative language and mechanisms to capture and query provenance in scalable graph analytics.<br/>
 
-All in all, [UCSD's Database Lab](http://db.ucsd.edu/) has an impressive 6 full research papers at SIGMOD 2019, tied for the highest by an academic database group (<a href="https://sigmod2019.org/sigmod_research_papers_list" target=_blank>see full list here</a>). And the tie is with none other than UW-Madison (my alma mater). I am certainly looking forward to the customary group photos with both the UCSD and UW-Madison contingents (armies?) at Amsterdam! :)
+All in all, [UCSD's Database Lab](http://db.ucsd.edu/) has an impressive 6 full research papers at SIGMOD 2019, tied for the highest by an academic database group [see full list here](https://sigmod2019.org/sigmod_research_papers_list). And the tie is with none other than UW-Madison (my alma mater). I am certainly looking forward to the customary group photos with both the UCSD and UW-Madison contingents (armies?) at Amsterdam! :)
 
