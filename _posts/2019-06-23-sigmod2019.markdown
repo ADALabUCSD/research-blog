@@ -27,7 +27,7 @@ ADA Lifecycle and our SIGMOD Presence
 As illustrated below and elaborated [in a recent textbook I co-authored](https://www.morganclaypoolpublishers.com/catalog_Orig/product_info.php?products_id=1366 ), we split the ADA/ML application lifecycle into three main stages: Source, Build, and Deploy.
 
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/2019-06-23-sigmod2019/ADALab.jpg" width="450" alt="jackie">
+<img src="{{site.baseurl}}/assets/2019-06-23-sigmod2019/ADALab.jpg" width="600" alt="jackie">
 </p>
 
 <I>Source</I> is the stage of procuring, organizing, and preparing data for ML. <I>Build</I> is the stage of crafting prediction functions using the data. <I>Deploy</I> is the stage of integrating prediction functions with the data application. Throughout this lifecycle, bottlenecks arise for both <I>resource efficiency</I> and <I>human productivity</I>. ADALab's research systematically tackles such bottlenecks to make it easier, faster, and cheaper for data applications to exploit ML. 
