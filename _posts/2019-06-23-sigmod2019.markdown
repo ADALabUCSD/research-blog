@@ -86,7 +86,7 @@ Training deep nets requires a highly empirical model selection process to config
 
 <I>Blog post</I>: Supun and Yuhao talk more about Cerebro in [this post](https://adalabucsd.github.io/research-blog/cerebro.html).<br/>
 
-<I>Impact</I>: Pivotal has expressed interest in integrating Cerebro into Greenplum and MADlib.<br/><br/>
+<I>Impact</I>: Pivotal has expressed interest in integrating Cerebro into Greenplum and MADlib. Cerebro is also helping behavioral health scientists at UCSD use deep nets to get a deeper understanding of daily exercise activities and their impact on health.<br/><br/>
 
 
 <b>Krypton</b>. [Paper](https://adalabucsd.github.io/papers/2019_Krypton_SIGMOD.pdf). [Project webpage](https://adalabucsd.github.io/krypton.html).<br/>
@@ -106,12 +106,12 @@ Automatic speech recognition (ASR) is now highly accurate due to deep learning, 
 
 <I>Blog post</I>: Vraj talks more about SpeakQL in [this post](https://adalabucsd.github.io/research-blog/research/2019/06/19/speakql.html).<br/>
 
-<I>Fun fact</I>: The SpeakQL demo includes a competition on who can speak correct SQL fastest. So, bring your A-game database aficionados! :)<br/><br/><br/>
+<I>Fun fact</I>: The SpeakQL demo includes a competition on who can speak correct SQL fastest. Database aficionados, bring your A-game! :)<br/><br/><br/>
 
 
 Overall, I feel incredibly fortunate to work with (or have worked with) such a splendid cohort of creative and productive students. I may be going out on a limb but I believe our presence is likely the largest ever at a SIGMOD/VLDB by an academic's research group. Apart from the hard work of my students and collaborators, another key reason for this is the extra thorough and fair PC process this year thanks to the terrific efforts of Natassa Ailamaki, the PC chair.<br/>
 
-I would also like to thank all past and present sponsors of ADALab's research. We are firing on all cylinders in our quest to better understand, characterize, and improve all stages of the ADA lifecycle. Watch this space for both more research publications and more software/dataset releases from us in the near future.
+I would also like to thank all past and present sponsors of ADALab's research. We are firing on all cylinders in our quest to better understand, characterize, and improve all stages of the ADA lifecycle. Watch this space for both more research publications, more open source software, and more dataset releases from us in the near future.
 
 <div align="center" markdown="1">
 ![ADA Lifecyle]({{site.baseurl}}/assets/2019-06-23-sigmod2019/ADALabSponsors.jpg)
