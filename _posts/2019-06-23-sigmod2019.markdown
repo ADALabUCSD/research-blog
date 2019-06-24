@@ -7,7 +7,7 @@ categories: research
 author: Arun Kumar
 ---
 
-ACM SIGMOD is the premier conference for research on data management and data systems. And at [SIGMOD 2019](https://sigmod2019.org/), the students, alumni, and friends of the ADALab are staging an impressive presence. This post gives an overview of the papers and demos from my research group at SIGMOD and how they are intellectually connected. It also acts as a one-stop shop for the ADALab program at SIGMOD. For starters, here are some salient statistics:
+ACM SIGMOD is the premier conference for research on data management and data systems. And at [SIGMOD 2019](https://sigmod2019.org/), the students, alumni, and friends of the [ADALab](https://adalabucsd.github.io) are staging an impressive presence. This post gives an overview of the papers and demos from my research group at SIGMOD and how they are intellectually connected. It also acts as a one-stop shop for the ADALab program at SIGMOD. For starters, here are some salient statistics:
 
 <ul>
 <li> 4 full research papers: Krypton, MorpheusFI, Tuple-Oriented Compression, and Nimbus.</li>
