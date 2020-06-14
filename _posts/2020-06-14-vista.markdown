@@ -38,7 +38,7 @@ However, a CNN has a lot of layers. Which layer you should use for feature trans
 
 Problem
 =======
-To execute this workload, today there is no **single system** that you can use. You need to use a **deep learning system** such as TensorFlow to extract CNN features. These systems are optimized for neural networks and provide seamless hardware acceleration.
+To execute this workload, today there is **no single system** that you can use. You need to use a **deep learning system** such as TensorFlow to extract CNN features. These systems are optimized for neural networks and provide seamless hardware acceleration.
 But such systems do not provide features like performing ETL on structured data, distributed memory/file management, and support for classical ML models such as tree-based ML models, which are provided by **parallel dataflow systems** such as Apache Saprk.
 Thus users have to use a deep learning system to extract CNN features, export them to files, load the CNN feature files along with structured features into a parallel dataflow system, and then train and evaluate downstream ML models. If you are exploring multiple layers, you will have to repeat this process for all the layers.
 
