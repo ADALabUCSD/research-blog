@@ -7,7 +7,7 @@ categories: research
 author: Supun Nakandala
 ---
 
-This post is regarding our project [Vista](https://adalabucsd.github.io/vista.html). Vista will appear at SIGMOD 2020 in the research track. The paper titled *Vista: Optimized System for Scalable Feature Transfer from Deep CNNs at Scale* is available [here](https://adalabucsd.github.io/papers/TR_2020_Vista.pdf). It is co-authored with my advisor Prof. Arun Kumar.
+This post is regarding our project [Vista](https://adalabucsd.github.io/vista.html). Vista will appear at SIGMOD 2020 in the research track. The paper titled *Vista: Optimized System for Scalable Feature Transfer from Deep CNNs at Scale* is available [here](https://adalabucsd.github.io/papers/2020_Vista_SIGMOD.pdf). It is co-authored with my advisor Prof. Arun Kumar.
 
 
 Observation
