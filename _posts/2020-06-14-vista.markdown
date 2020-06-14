@@ -73,4 +73,10 @@ Concluding Remarks
 Overall, we found that Vista can improve the efficiency of the CNN feature transfer workload by up to 90% and also avoid unexpected workload crashes due to various memory-related misconfiguration issues.
 We invite you to read our full technical [report](https://adalabucsd.github.io/papers/TR_2020_Vista.pdf). The system [code](https://github.com/adalabucsd/vista) is also publically available.
 For future work, we plan to support feature transfer from more general forms of deep neural networks, downstream ML tasks, and other types of unstructured data such as text as well.
+
+A short video explaining the high-level architecture of Vista and the optimization techniques used can be found below.
+<div align="center" markdown="1">
+<iframe width="720" height="415" src="https://youtu.be/nmfUFCDthAo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 Feel free to reach us for any questions, suggestions, and/or comments.
