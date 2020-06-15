@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Just Speak SQL"
-date:   2020-06-14 18:11:12 -0700
+date:   2020-06-13 18:31:12 -0700
 categories: research
 author: Vraj Shah and Side Li
 ---
