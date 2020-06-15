@@ -20,7 +20,7 @@ Machine learning (ML) is revolutionizing many fields. Inspired by the major succ
 
 Opportunity
 ===========
-Recent advancements in Deep Convolutional Neural Networks (CNNS) have tremendously improved our ability to automatically understand images. And they now provide a unique opportunity to integrate image data with structured data for performing multi-modal analytics using a technique called deep CNN **feature transfer**.
+Recent advancements in Deep Convolutional Neural Networks (CNNs) have tremendously improved our ability to automatically understand images. And they now provide a unique opportunity to integrate image data with structured data for performing multi-modal analytics using a technique called deep CNN **feature transfer**, a form of transfer learning in ML.
 
 CNN feature transfer works as follows. Assume you are a data scientist working at an online e-commerce retailer and you need to train a product recommendation model using both structured features and also using image data such as the product images.
 You take a pre-trained CNN (e.g., VGG16 model trained on popular ImageNet dataset), and feed your image data through the CNN and select the output of one of the internal CNN layers as a representation for your images. You then combine the extracted CNN features with your structured features to come up with a multimodal representation of your data, which you can then use to train ML models on.
@@ -39,7 +39,7 @@ However, a CNN has a lot of layers. Which layer you should use for feature trans
 Problem
 =======
 To execute this workload, today there is **no single system** that you can use. You need to use a **deep learning system** such as TensorFlow to extract CNN features. These systems are optimized for neural networks and provide seamless hardware acceleration.
-But such systems do not provide features like performing ETL on structured data, distributed memory/file management, and support for classical ML models such as tree-based ML models, which are provided by **parallel dataflow systems** such as Apache Saprk.
+But such systems do not provide features like performing ETL on structured data, distributed memory/file management, and support for classical ML models such as tree-based ML models, which are provided by **parallel dataflow systems** such as Apache Spark.
 Thus users have to use a deep learning system to extract CNN features, export them to files, load the CNN feature files along with structured features into a parallel dataflow system, and then train and evaluate downstream ML models. If you are exploring multiple layers, you will have to repeat this process for all the layers.
 
 <div align="center" markdown="1">
@@ -72,7 +72,7 @@ Concluding Remarks
 ==================
 Overall, we found that Vista can improve the efficiency of the CNN feature transfer workload by up to 90% and also avoid unexpected workload crashes due to various memory-related misconfiguration issues.
 We invite you to read our full technical [report](https://adalabucsd.github.io/papers/TR_2020_Vista.pdf). The system [code](https://github.com/adalabucsd/vista) is also publically available.
-For future work, we plan to support feature transfer from more general forms of deep neural networks, downstream ML tasks, and other types of unstructured data such as text as well.
+For future work, we plan to support more general forms of transfer learning with deep neural networks, downstream ML tasks, and other forms of unstructured data such as text as well.
 
 A short video explaining the high-level architecture of Vista and the optimization techniques used can be found below.
 <div align="center" markdown="1">
