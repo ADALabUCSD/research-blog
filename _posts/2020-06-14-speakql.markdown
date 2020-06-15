@@ -100,7 +100,7 @@ A short video describing our system can be found below.
 <iframe width="720" height="415" src="https://www.youtube.com/embed/OnVbY_LqSII"></iframe>
 </div>
 
-
+<br>
 A demonstration video of SpeakQL (created for the user study) can be found below.
 
 <div align="center" markdown="1">
