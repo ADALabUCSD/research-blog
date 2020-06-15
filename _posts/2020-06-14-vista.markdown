@@ -46,7 +46,7 @@ Thus users have to use a deep learning system to extract CNN features, export th
 ![sota]({{site.baseurl}}/assets/2020-06-13-vista/sota.jpeg)
 </div>
 
-This dichotomy between parallel dataflow systems for performing scalable analytics today causes several issues for workloads that want to jointly analyze image and structured data.
+This dichotomy between systems for performing scalable analytics today causes several issues for workloads that want to jointly analyze image and structured data.
 
 1. **Usability Issues**: Users now have to straddle between two different systems by manually writing and loading feature files which drastically degrades the user experience. Furthermore, executing this workload on deep learning and parallel dataflow systems require a significant amount of low-level configuration knob tuning. ML users can get bogged down by these low-level systems issues whereas they should primarily focus on ML related exploration.
 
