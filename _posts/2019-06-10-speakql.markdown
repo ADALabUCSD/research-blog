@@ -2,12 +2,12 @@
 layout: post
 comments: true
 title:  "Just Speak SQL"
-date:   2019-06-18 18:19:32 -0700
+date:   2020-06-14 18:11:12 -0700
 categories: research
 author: Vraj Shah and Side Li
 ---
 
-This post is regarding our project [SpeakQL](https://adalabucsd.github.io/speakql.html). SpeakQL will appear at SIGMOD 2019 in the demonstration track. The paper titled *Demonstration of SpeakQL: Speech-driven Multimodal Querying of Structured Data* is available [here](https://adalabucsd.github.io/papers/2019_SpeakQL_SIGMOD.pdf). It is co-authored with Side Li, Kevin Yang, Arun Kumar, and Lawrence Saul.
+This post is regarding our project [SpeakQL](https://adalabucsd.github.io/speakql.html). SpeakQL will appear at SIGMOD 2020 in the research track. The paper titled *SpeakQL: Towards Speech-driven Multimodal Querying of Structured Data* is available [here](https://adalabucsd.github.io/papers/2020_SpeakQL_SIGMOD.pdf). It is co-authored with Side Li, Kevin Yang, Arun Kumar, and Lawrence Saul.
 
 
 Introduction
@@ -94,11 +94,18 @@ Concluding Remarks
 
 Overall, we found that SpeakQL's unique multimodal design allows users to compose queries significantly faster and reduces their touch effort in specifying or correcting the query. Our techniques are inspired from disparate literatures such as database systems, natural language processing, information retrieval, and human-computer interaction. We build an end-to-end system adapting these techniques to the context of spoken SQL based on the syntactic and semantic properties of SQL queries. This project is our first step in making speech-driven querying of structured data effective and efficient. 
 
-A demonstration video of SpeakQL (created for the user study) can be found below.
+A short video describing our system can be found below.
 
 <div align="center" markdown="1">
-<iframe width="720" height="415" src="https://www.youtube.com/embed/rizCGq5O1KY"></iframe>
+<iframe width="720" height="415" src="https://www.youtube.com/watch?v=OnVbY_LqSII&feature=youtu.be"></iframe>
 </div>
 
 
-We invite you to read our full technical [report](https://adalabucsd.github.io/papers/TR_2019_SpeakQL_v2.pdf). Feel free to reach us for any questions, suggestions, and/or comments.
+A demonstration video of SpeakQL (created for the user study) can be found below.
+
+<div align="center" markdown="1">
+<iframe width="720" height="415" src="https://vimeo.com/295693078"></iframe>
+</div>
+
+
+We invite you to read our full technical [report](https://adalabucsd.github.io/papers/TR_2020_SpeakQL.pdf). Feel free to reach us for any questions, suggestions, and/or comments.
