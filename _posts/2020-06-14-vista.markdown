@@ -52,7 +52,7 @@ This dichotomy between systems for performing scalable analytics today causes se
 
 2. **Efficiency Issues**: Naively exploring multiple layers by exploring one layer at a time can cause significant inefficiencies due to redundant computations. This is because the computations required to extract features for a lower CNN layer are a strict subset of the computations which are required to extract features for a higher layer.
 
-3. **Reliability Issues**: CNN features can be orders of magnitude larger than their highly compressed input images which are in formats like JPEG. As a result of this size blowup, if the system is not properly configured, it can cause costly disk-spills for storing intermediate data in memory or certain cases even workload crashes.
+3. **Reliability Issues**: CNN features can be orders of magnitude larger than their highly compressed input images which are in formats like JPEG. As a result of this size blowup, if the system is not properly configured, it can cause costly disk-spills for storing intermediate data in memory or in certain cases even workload crashes.
 
 Our Contributions
 ==================
