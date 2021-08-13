@@ -1,0 +1,195 @@
+---
+layout: post
+comments: true
+title:  "ADALab at VLDB and KDD 2021"
+date:   2021-08-13 16:00:00 +0200
+categories: research
+author: Arun Kumar
+---
+
+VLDB is one of the premier conferences for research on databases and data systems; 
+KDD, for research on data mining.
+Much to some attendees' chagrin, they happen to fall on the same week in 2021.  
+ADALab members and alumni are attending both with a packed program of talks, panels, and a demo.
+This post is a one-stop shop for what we are up to at VLDB and KDD this year.
+
+<ul>
+<li> 2 full research papers at VLDB: Both from Project Cerebro.</li>
+<li> 1 research demonstration at VLDB: Also from Project Cerebro.</li>
+<li> 1 industry track paper at VLDB: From Project Morpheus.</li>
+<li> 1 panel discussion and 1 round table chat at VLDB.</li>
+<li> 2 research talks at KDD.</li> 
+</ul>
+
+Here are vignettes on all of our presentations. If you want to start with a 
+birds-eye view of how all this fits into ADALab's larger research focus of data 
+management and systems for ML/AI, please see the overview of our lab's work in 
+[this prior post](https://adalabucsd.github.io/research-blog/research/2019/06/23/sigmod2019.html)
+on our presence at SIGMOD 2019.
+
+
+Overview of ADALab Papers at VLDB 2021
+=========================================
+
+
+<b>Cerebro on Data Systems</b>. [Paper](https://adalabucsd.github.io/papers/2021_Cerebro-DS.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html).<br/>
+
+We had recently published a bunch about our Cerebro system and a new parallel execution technique
+for stochastic gradient descent we call Model Hopper Parallelism (MOP),
+including [on this blog](https://adalabucsd.github.io/research-blog/cerebro.html).
+Our friends over at Apache MADlib / Pivotal (now part of VMware) got interested in adopting MOP for enabling distributed deep learning 
+model building over Greenplum. Yuhao interned with them and helped ship MOP as part of MADlib; 
+see [their blog post](https://tanzu.vmware.com/content/blog/model-selection-for-deep-neural-networks-on-greenplum-database).
+We then decided to study the larger tradeoff space of how best to bring MOP to parallel data system. 
+This research paper lays out that comparative study, both analytically and empirically.
+We decribe a whole spectrum of approaches spanning fully in-RDBMS, partially in-RDBMS, 
+in-DB but not in-RDBMS, and export-to-Spark.<br/>
+
+This paper should be a useful read for all DBMS and cloud vendors interested in offering 
+more native support for DL tools such as TensorFlow or PyTorch to their DB customers.
+<br/>
+
+
+<b>Kingpin</b> (part of Cerebro). [Paper](https://adalabucsd.github.io/papers/2021_Cerebro-DS.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html).<br/>
+
+In the Cerebro project we are exploring the whole space of hybrid parallelism
+techniques to improve resource efficiency for ML model selection at scale.
+In this research paper, Side identifies and studied in depth a new tradeoff space 
+underappreciated so far in ML systems: building separate models for separate data sub-groups.
+This practice, which we call <i>learning over groups</i> is now common in many enterprise 
+and Web applications to improve accuracy, privacy, and/or resource management for serving. 
+However, prior art leaves a lot on the table by taking narrow one-dimensional parallelism 
+approaches such as task parallelism or data parallelism alone. 
+We devise a novel paradigm we call <i>grouped learning</i>, including a new parallel 
+execution technique for gradient descent we call Gradient Accumulation Parallelism (GAP), 
+to optimize this workload. Our ideas are applicable to multiple kinds of ML access patterns:
+GLMs, DL, and GBDT.  
+Our ideas are prototyped on PyTorch, LightGBM, and the task runtime Ray. 
+These ideas will eventually be folded into the larger Cerebro platform for scalable DL.
+<br/>
+
+This paper should be a fun read for those interested in new scalable systems and query 
+optimization techniques for ML/DL, as well as ML users interested in more efficient 
+learning over groups.
+<br/>
+
+
+<b>Cerebro Demo</b>. [Paper](https://adalabucsd.github.io/papers/2021_Cerebro-DS.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html).<br/>
+
+In this demonstration, Liangde and Supun present our new interface for Cerebro that
+breaks a pervasive (false) dichotomy in DL interfaces: interactive human-in-the-loop
+specification vs offline one-short Automed ML (AutoML) heuristics. Our experiences 
+with large-scale DL model building for domain science applications shows that an 
+<i>intermittent</i> specification interface that bridges this gap between fully manual 
+and fully automated is ideal for DL due to the long runtimes of DL training.
+Users can spawn a large set of DL configurations in one go, observe and kill unproductive
+configurations over time, clone/modify productive configurations to explore more, 
+and do much more, all from a unified dashboard GUI. 
+We leverage TensorBoard for visualization of all model metrics.
+<br/>
+ 
+This demo should be fun to check out for all users of DL.
+Do check out this [short demo overview video](https://youtu.be/K3THQy5McXc).
+<br/>
+
+
+<b>Trinity</b> (part of Morpheus). [Paper](https://adalabucsd.github.io/papers/2021_Trinity_VLDB.pdf). [Project webpage](https://adalabucsd.github.io/morpheus.html).<br/>
+
+We have published a bunch before on <i>factorized learning</i>, a paradigm I had introduced
+in my thesis work to push ML computations down through joins of tables in order to make ML
+over relational data faster. This included generalizing that idea to all kinds of ML programs
+expressible in the formal language of linear algebra (matrix arithmetic).
+In this industry track paper, David and Shaoqing take it to the next level by showing how to 
+generalize the factorized linear algebra framework itself to multiple programming languages 
+with a single unified implementation leveraging Oracle's GraalVM polyglot compiler and runtime.
+This is a great case study of bringing cutting-edge DB+ML research and PL/compilers research 
+together to serve an emerging polyglot industrial data science landscape.
+<br/>
+
+This paper should be a fun read for both DB folks and PL/compilers folks, as well as for 
+people building new tools for end-to-end data science workloads. 
+<br/>
+
+
+Our Other Activities at VLDB 2021
+=====================================
+
+
+I myself am also participating in and/or co-organizing three other activities at VLDB:
+<br/>
+
+<b>Panel Discussion on The Future of Data(base) Education.</b> [Webpage](https://vldb.org/2021/?program-schedule-panel#Panel_2)<br/>  
+We are going to debate whether DB education has become outdated and if so, how to evolve
+in this new era of Data Science. 
+As some background, I have been busy creating new courses at UC San Diego, including 
+undergraduate [DB Systems Implementation](http://cseweb.ucsd.edu/classes/sp21/cse132C-a/) for CSE, 
+undergraduate [Systems for Scalable Analytics](https://cseweb.ucsd.edu/~arunkk/dsc102_winter21) for HDSI,
+and graduate [Data Systems for ML](http://cseweb.ucsd.edu/classes/fa20/cse291-d/) for CSE.
+I also co-authored the first research-oriented [textbook on ML systems](https://www.morganclaypool.com/doi/10.2200/S00895ED1V01Y201901DTM057).
+I also helped create CSE's MS depth in Data Science, helped define HDSI's core data systems
+course series at both undergraduate and graduate levels, and am helping create UCSD's first 
+Online Masters degree in Data Science, administered jointly by CSE and HDSI.
+I look forward to sparring with the other panelists and host on the pressing questions
+and lessons for DB education going forward!
+<br/> 
+
+<b>Round table on Systems for ML.</b>
+Along with Chris Jermaine, I am co-hosting this round table for this sub-area of 
+Systems for ML for interested VLDB attendees. We have confirmed a set of exciting 
+panelists to stir discussion on this topic: Carlo Curino, Ce Zhang, Jun Yang, 
+Manasi Vartak, Matei Zaharia, Matthias Boehm, Paroma Varma, and Sebastian Schelter.
+Looking forward to it!
+<br/>
+
+<b>Invited SDS Talk Series.</b>
+This was the inaugural year of VLDB's new Research Track category called Scalable Data Science (SDS).
+I had helped define and run it as an Associate Editor; see [this SIGMOD Blog post](https://wp.sigmod.org/?p=3033).
+It was a quite a successful year, with a whole slew of eclectic and exciting SDS papers published at VLDB 2021.
+To celeberate the launch of SDS, we are hosting a series of 6 stellar speakers from both academia
+and industry who will share about their work in the SDS arena: 
+Joaquin Vanschoren, Anja Feldmann, Danai Koutra, Matei Zaharia, Manasi Vartak, and Nigam Shah.
+Please see [this webpage](https://vldb.org/2021/?program-schedule-sds-invited) for details on their talks.
+<br/>
+
+
+
+Overview of ADALab Talks at KDD 2021
+======================================
+
+Finally, I am also attending KDD to give two research talks: 
+<br/>
+
+<ul>
+<li>Invited talk at the KDD Applied Data Science (ADS) talk series. [Program webpage](https://www.kdd.org/kdd2021/speakers/applied-data-science-invited-speakers).
+The ADS track of KDD was one of the inspirations for VLDB's SDS, although the rationales and 
+criteria are a bit different. 
+I will be speaking about what I see as the new "DBfication" of ML/AI and how the data 
+mining community can join forces with the DB and other research communities to help democratize ML/AI.
+</li>
+<li>
+<b>Talk at Deep Learning Day.</b> [Talk Abstract](https://adalabucsd.github.io/papers/2021_DLDelusions_KDD.pdf). [Program webpage](https://deeplearningday.github.io/program/).
+Along with Supun and Yuhao, I had sent in a talk proposal to this cool event 
+that aims to reflect on various issues in the state of DL practice and research. 
+I will be speaking about a set of major issues I see in DL practice centered on 
+issues of model selection and system scalability. Or as I phrase it more colorfully,
+I will bust some common "damaging delusions" of DL practice. I will also cover how 
+DL users and system developers can avoid those delusions by drawing upon our experiences
+in Project Cerebro.
+</li>
+</ul>
+
+
+
+<br/>
+Overall, we have a large mix of presentations from ADALab at VLDB and KDD in just three days. 
+We look forward to learning more from the audience questions and feedback and also 
+hopefully inspiring more work on this exciting direction of data management/systems 
+for ML/AI, AKA the new DBficiation of ML/AI!
+<br/>
+
+A huge thank you to all of our research collaborators, supporters, and sponsors! 
+
+<div align="center" markdown="1">
+![ADA Lifecyle]({{site.baseurl}}/assets/2019-06-23-sigmod2019/sponsors.jpeg)
+</div>
+
