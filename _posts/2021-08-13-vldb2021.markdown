@@ -27,13 +27,17 @@ birds-eye view of how all this fits into ADALab's larger research focus of data
 management and systems for ML/AI, please see the overview of our lab's work in 
 [this prior post](https://adalabucsd.github.io/research-blog/research/2019/06/23/sigmod2019.html)
 on our presence at SIGMOD 2019.
+All talk videos will be made public by both conferences after their events. 
+Feel free to check this page again next week for an update with the video links.
 <br/>
+
+
 
 Overview of ADALab Papers at VLDB 2021
 =========================================
 
 
-<b>Cerebro on Data Systems</b>. [Paper](https://adalabucsd.github.io/papers/2021_Cerebro-DS.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html).<br/>
+<b>Cerebro on Data Systems</b>. [Paper](https://adalabucsd.github.io/papers/2021_Cerebro-DS.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html). [Blog post](https://adalabucsd.github.io/research-blog/cerebro-ds.html)<br/>
 
 We had recently published a bunch about our Cerebro system and a new parallel execution technique
 for stochastic gradient descent we call Model Hopper Parallelism (MOP),
@@ -48,7 +52,8 @@ in-RDBMS approach, a new partially in-RDBMS approach,
 a new in-DB but not in-RDBMS approach, and export-to-Spark.<br/>
 
 I think this paper is a must read for all DBMS and cloud vendors interested in offering 
-more native support for DL tools such as TensorFlow or PyTorch to their DB customers.
+more native support for DL tools such as TensorFlow or PyTorch to their DB customers. 
+I'd suggest starting with Yuhao's [blog post](https://adalabucsd.github.io/research-blog/cerebro-ds.html) first.
 <br/><br/>
 
 
