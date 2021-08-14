@@ -12,7 +12,7 @@ author: Yuhao Zhang
 *This post is about our project Cerebro and paper: Distributed Deep Learning on Data Systems: A Comparative Analysis of Approaches. Please check the home page at [here](https://adalabucsd.github.io/cerebro.html).*
 
 For decades, data systems have been central to data analytics, and there have been enormous efforts to integrate machine learning into DBMS. This paradigm of "In-DBMS ML" (or "In-data system ML") has waxed and waned over the last 20 years. In the past decade, there has been this revolution of deep learning, and it's been so popular and widely adopted. In this context, the increasingly asked question is how we can enable seamless support for deep learning over DB-resident data.
-# Why not just export and go
+# Why not just export and go?
 Why do we care about this topic? Why don't we just export the data to a data lake and run machine learning there? 
 
 First, because in-DBMS ML provides a familiar SQL interface to the DB users and business analysts. Second is the ease of provenance; this has always been important but recently got a renewed urgency due to regulations such as GDPR and CCPA, and DBMS already provides good support for governance and provenance. Last but not least is the mature distributed execution engine that a DBMS offers; we heard that SOTA deep learning tools are often criticized for being difficult to set up; DBMSes have the potential here to bridge the gap. 
@@ -26,7 +26,7 @@ This when our work comes into the picture, we do not want to reinvent the wheel 
 It's definitely not (only) because Cerebro is our own work. As a matter of fact, in addition to Cerebro and its training scheme Model Hopper Parallelism (MOP), there exists plenty of DL training and model selection systems such as the Parameter Server, model averaging, task-parallel, and the ring-allreduce-based systems. Each of them falls short on some end, and we genuinely believe Cerebro is the better choice for distributed in-DBMS deep learning.
 
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/2021-08-01-cerebro-ds/comp_table.png" width="300" alt="table">
+<img src="{{site.baseurl}}/assets/2021-08-01-cerebro-ds/comp_table.png" width="600" alt="table">
 </p>
 
 In the paper, we compared against Pytorch Distributed Data-Parallel and it turns out to be 3x slower than Cerebro. We also played with Hyperopt and Cerebro can match its performance and have the benefit of better data scalability. 
@@ -42,7 +42,7 @@ We imagined four canonical paths that can be taken to integrate Cerebro into DBM
 ### Fully in-DBMS (UDAF)
 
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/2021-08-01-cerebro-ds/udaf.png" width="300" alt="table">
+<img src="{{site.baseurl}}/assets/2021-08-01-cerebro-ds/udaf.png" width="600" alt="table">
 </p>
 
 The first approach is through the User Defined Aggregate Function (UDAF) extension of the DBMS. We basically translate the deep learning training tasks into UDAFs, which then invoke TensorFlow for DL. The pros are ease of governance, and it fits in existing design patterns such as MADlib; in fact, this approach has been adopted by it. The cons are overheads accessing data from the DBMS to python and TensorFlow. And there are synchronization barriers imposed by the DBMS, but MOP is essentially an asynchronous method, so we had to force MOP to work in the sync mode; this may hinder efficiency when the workload is imbalanced.
@@ -70,7 +70,7 @@ The next approach is what we call Concurrent Targeted Queries (CTQ). It's mainly
 
 ### In-DB but not in-DBMS (DA)
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/2021-08-01-cerebro-ds/da.png" width="300" alt="table">
+<img src="{{site.baseurl}}/assets/2021-08-01-cerebro-ds/da.png" width="600" alt="table">
 </p>
 We encountered many troubles due to the proprietary data storage formats (called pagefiles) that nowadays RDBMSes use. This kind of design largely denies access from anywhere except the DBMS's internal methods. However, going through the entire query stack of the DBMS and shipping it to the DL tools drastically bottlenecks the performance. Also, for DL workloads, we need nothing more than a simple table scan.
 
@@ -87,11 +87,13 @@ The landscape is quickly changing though, the new Lakehouse architecture already
 
 ### Fully out-of-DBMS (Export)
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/2021-08-01-cerebro-ds/cerebro-spark.png" width="300" alt="table">
+<img src="{{site.baseurl}}/assets/2021-08-01-cerebro-ds/cerebro-spark.png" width="600" alt="table">
 </p>
 AKA: I am gonna export my data anyway! Well, congratulations, you picked the easiest route; we have a [Cerebro-Spark](https://adalabucsd.github.io/cerebro-system) system built to offer the best efficiency and zero DBMS guaranteed. 
 <b>Pros:</b> 
+
 -   Offers high efficiency
+
 <b>Cons:</b> 
 -   Loss in the ease of governance
 
@@ -101,7 +103,7 @@ Well, it all depends. Overall, the in-DBMS approaches of UDAF and CTQ may provid
 In the paper, we evaluated them on 6 axes of comparison; here, I only show the two most important axes, the ease of governance and efficiency. There are many more tradeoffs between these axes.
 
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/2021-08-01-cerebro-ds/2d_trade_offs.png" width="300" alt="table">
+<img src="{{site.baseurl}}/assets/2021-08-01-cerebro-ds/2d_trade_offs.png" width="600" alt="table">
 </p>
 
 
