@@ -126,7 +126,7 @@ This is a great case study of bringing together cutting-edge DB+ML research and 
 research to help the emerging polyglot industrial data science landscape.
 <br/>
 
-This paper should be a fun read for both DB/ML systems olks and PL/compilers folks, 
+This paper should be a fun read for both DB/ML systems folks and PL/compilers folks, 
 as well as for people building new tools for end-to-end data science workloads. 
 <br/><br/>
 
