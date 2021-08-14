@@ -52,7 +52,7 @@ more native support for DL tools such as TensorFlow or PyTorch to their DB custo
 <br/><br/>
 
 
-<b>Kingpin</b> (part of Cerebro). [Paper](https://adalabucsd.github.io/papers/2021_Cerebro-DS.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html).<br/>
+<b>Kingpin</b> (part of Cerebro). [Paper](https://adalabucsd.github.io/papers/2021_Kingpin_VLDB.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html).<br/>
 
 In the Cerebro project we are exploring a larger space of hybrid parallelism
 techniques to improve resource efficiency for ML/DL workloads. 
@@ -75,7 +75,13 @@ learning over groups.
 <br/><br/>
 
 
-<b>Cerebro Demo</b>. [Paper](https://adalabucsd.github.io/papers/2021_Cerebro-DS.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html).<br/>
+<div align="center" markdown="1">
+![ADA Lifecyle]({{site.baseurl}}/assets/2021-08-13-vldb2021/panel.jpeg)
+</div>
+<br/>
+
+
+<b>Cerebro Demo</b>. [Paper](https://adalabucsd.github.io/papers/2021_Cerebro_VLDB_Demo.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html).<br/>
 
 In this demonstration, Liangde and Supun present our new interface for Cerebro that
 breaks a pervasive (false) dichotomy in DL interfaces: interactive human-in-the-loop
@@ -95,6 +101,11 @@ Do check out this [short demo overview video](https://youtu.be/K3THQy5McXc).
 <br/><br/>
 
 
+<div align="center" markdown="1">
+![ADA Lifecyle]({{site.baseurl}}/assets/2021-08-13-vldb2021/demo.jpeg)
+</div>
+<br/>
+
 <b>Trinity</b> (part of Morpheus). [Paper](https://adalabucsd.github.io/papers/2021_Trinity_VLDB.pdf). [Project webpage](https://adalabucsd.github.io/morpheus.html).<br/>
 
 We have published a bunch before on <i>factorized learning</i>, a paradigm I had introduced
@@ -111,6 +122,7 @@ research to help the emerging polyglot industrial data science landscape.
 This paper should be a fun read for both DB/ML systems olks and PL/compilers folks, 
 as well as for people building new tools for end-to-end data science workloads. 
 <br/><br/>
+
 
 
 Our Other Activities at VLDB 2021
@@ -180,6 +192,11 @@ issues of model selection and system scalability. Or as I phrase it more colorfu
 I will bust some common "damaging delusions" of DL practice. I will also cover how 
 DL users and system developers can avoid those delusions by drawing upon our experiences
 in Project Cerebro.
+<br/>
+
+<div align="center" markdown="1">
+![ADA Lifecyle]({{site.baseurl}}/assets/2021-08-13-vldb2021/dbfication.png)
+</div>
 <br/>
 
 
