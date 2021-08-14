@@ -27,7 +27,7 @@ birds-eye view of how all this fits into ADALab's larger research focus of data
 management and systems for ML/AI, please see the overview of our lab's work in 
 [this prior post](https://adalabucsd.github.io/research-blog/research/2019/06/23/sigmod2019.html)
 on our presence at SIGMOD 2019.
-
+<br/>
 
 Overview of ADALab Papers at VLDB 2021
 =========================================
@@ -119,7 +119,6 @@ Our Other Activities at VLDB 2021
 
 I myself am also participating in and/or co-organizing three other activities at VLDB:
 <br/>
-<br/>
 
 <b>Panel Discussion on The Future of Data(base) Education.</b> [Webpage](https://vldb.org/2021/?program-schedule-panel#Panel_2)  
 We are going to debate whether DB education has become outdated and if so, how to evolve
@@ -165,14 +164,12 @@ Overview of ADALab Talks at KDD 2021
 
 Finally, I am also attending KDD to give two research talks: 
 <br/>
-<br/>
 
 <b>Invited talk at the KDD Applied Data Science (ADS) talk series</b>. [Program webpage](https://www.kdd.org/kdd2021/speakers/applied-data-science-invited-speakers).
 The ADS track of KDD was one of the inspirations for VLDB's SDS, although the rationales and 
 criteria are a bit different. 
 I will be speaking about what I see as the new "DBfication" of ML/AI and how the data 
 mining community can join forces with the DB and other research communities to help democratize ML/AI.
-<br/>
 <br/>
 
 <b>Talk at Deep Learning Day.</b> [Talk Abstract](https://adalabucsd.github.io/papers/2021_DLDelusions_KDD.pdf). [Program webpage](https://deeplearningday.github.io/program/).
@@ -197,6 +194,6 @@ the new DBficiation of ML/AI. :)
 ACK: A huge thank you to all of our research collaborators, supporters, and sponsors! 
 
 <div align="center" markdown="1">
-![ADA Lifecyle]({{site.baseurl}}/assets/2019-06-23-sigmod2019/sponsors.jpg)
+![ADA Lifecyle]({{site.baseurl}}/assets/2019-06-23-vldb2021/sponsors.jpg)
 </div>
 
