@@ -22,22 +22,24 @@ This post is a one-stop shop for what we are up to at VLDB and KDD this year.
 <li> 2 research talks at KDD.</li> 
 </ul>
 
-Here are vignettes on all of our presentations. If you want to start with a 
+This post presents vignettes on all of our presentations. If you want to start with a 
 birds-eye view of how all this fits into ADALab's larger research focus of data 
 management and systems for ML/AI, please see the overview of our lab's work in 
 [this prior post](https://adalabucsd.github.io/research-blog/research/2019/06/23/sigmod2019.html)
 on our presence at SIGMOD 2019.
-All talk videos will be made public by both conferences after their events. 
-Feel free to check this page again next week for an update with the video links.
 <br/>
 
+<b>NB:</b> All talk videos will be made public by both conferences after their events. 
+If you would like the video links, feel free to check this page again next week for an update.
+<br/>
+<br/>
 
 
 Overview of ADALab Papers at VLDB 2021
 =========================================
 
 
-<b>Cerebro on Data Systems</b>. [Paper](https://adalabucsd.github.io/papers/2021_Cerebro-DS.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html). [Blog post](https://adalabucsd.github.io/research-blog/cerebro-ds.html)<br/>
+<b>Cerebro meets Data Systems</b>. [Paper](https://adalabucsd.github.io/papers/2021_Cerebro-DS.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html). [Blog post](https://adalabucsd.github.io/research-blog/cerebro-ds.html)<br/>
 
 We had recently published a bunch about our Cerebro system and a new parallel execution technique
 for stochastic gradient descent we call Model Hopper Parallelism (MOP),
