@@ -52,7 +52,7 @@ In this section, I will briefly introduce two existing forms of parallelism for 
       </li>
     </ul>
   </li>
-  
+
   <li>
     <a class="toggle" href="javascript:void(0);">Data parallelism</a>
     <ul class="inner">
@@ -113,7 +113,7 @@ With such design, Cerebro should be highly data-scalable, reproducible , efficie
 
 # Experiments on ImageNet
 Now it is time to show you some experiment results. We compare a prototype implementation of MOP on TensorFlow to many state-of-the-art systems on an 8-node GPU cluster with Nvidia P100 GPUs. We train 16 models on ImageNet for 10 epochs: 2 architectures (VGG16 and ResNet50), 2 batch sizes (32 and 256); 2 learning rates (10E−4 and 10E−6 ), and 2 regularizers (10E-4 and 10E-6).
- 
+
 The following figure shows the makespans, average GPU utilization, and learning curves of the best model from each system.
 <p style="text-align:center;">
 <img src="{{site.baseurl}}/assets/2019-06-12-cerebro/initial_results.png" width="700" alt="tradeoffs">
@@ -127,7 +127,7 @@ The following figure shows the makespans, average GPU utilization, and learning 
 5. Celery and MOP have the best learning curves but note that Celery has 8x the memory/storage footprint as MOP due to dataset copies. 
 6. Overall, MOP is the most resource-efficient and still offers accuracy similar to sequential SGD.
 
-We are still working on the system. The code and the full paper are coming soon. Hopefully, Cerebro can one day help you, my friend, the *master of the black arts of deep learning*. Have a nice day!
+The system is open-sourced and available at [Cerebro](https://adalabucsd.github.io/cerebro-system). Hopefully, Cerebro can one day help you, my friend, the *master of the black arts of deep learning*. Have a nice day!
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
