@@ -193,6 +193,7 @@ I will bust some common "damaging delusions" of DL practice. I will also cover h
 DL users and system developers can avoid those delusions by drawing upon our experiences
 in Project Cerebro.
 <br/>
+<br/>
 
 <div align="center" markdown="1">
 ![ADA Lifecyle]({{site.baseurl}}/assets/2021-08-13-vldb2021/dbfication.png)
@@ -208,7 +209,7 @@ exciting direction of data management/systems for ML/AI, or as I like to call it
 the new DBficiation of ML/AI. :)
 <br/>
 
-ACK: A huge thank you to all of our research collaborators, supporters, and sponsors! 
+<b>ACKs:</b> A huge thank you to all of our research collaborators, supporters, and sponsors! 
 
 <div align="center" markdown="1">
 ![ADA Lifecyle]({{site.baseurl}}/assets/2021-08-13-vldb2021/sponsors.jpg)
