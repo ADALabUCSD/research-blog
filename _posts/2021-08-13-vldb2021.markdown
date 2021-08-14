@@ -212,8 +212,8 @@ in Project Cerebro.
 Overall, we have a large mix of presentations by ADALab members at VLDB and KDD in just 3 days.  
 We look forward to learning more from the audience questions and feedback on our work.
 I also hope our work and experiences inspire more researchers and students to work in this 
-exciting direction of data management/systems for ML/AI, or as I like to call it, 
-the new DBficiation of ML/AI. :)
+exciting direction of data management/systems for ML/AI--or as I like to call it, 
+the new DBfication of ML/AI. :)
 <br/>
 
 <b>ACKs:</b> A huge thank you to all of our research collaborators, supporters, and sponsors! 
