@@ -194,6 +194,6 @@ the new DBficiation of ML/AI. :)
 ACK: A huge thank you to all of our research collaborators, supporters, and sponsors! 
 
 <div align="center" markdown="1">
-![ADA Lifecyle]({{site.baseurl}}/assets/2019-06-23-vldb2021/sponsors.jpg)
+![ADA Lifecyle]({{site.baseurl}}/assets/2021-08-13-vldb2021/sponsors.jpg)
 </div>
 
