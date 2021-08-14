@@ -57,7 +57,7 @@ The first approach is through the User Defined Aggregate Function (UDAF) extensi
 
 ### Partially in-DBMS (CTQ)
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/2021-08-01-cerebro-ds/ctq.png" width="300" alt="table">
+<img src="{{site.baseurl}}/assets/2021-08-01-cerebro-ds/ctq.png" width="600" alt="table">
 </p>
 The next approach is what we call Concurrent Targeted Queries (CTQ). It's mainly designed to bypass the sync barriers; we dissect the training query into multiple queries with some tricks so that the query planner can send a targeted plan to each node. And they can return asynchronously. We then put them on a job queue and concurrently run them, collect the results, and stitch them together later. Hooray, asynchrony! Cons are still the data accessing overhead, and this may potentially violate some design code.
 
