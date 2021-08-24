@@ -32,6 +32,8 @@ on our presence at SIGMOD 2019.
 <b>NB:</b> All talk videos will be made public by both conferences after their events. 
 If you would like the video links, feel free to check this page again next week for an update.
 <br/>
+Edit on Aug 24: I have added links to the available videos.
+<br/>
 <br/>
 
 
@@ -39,7 +41,7 @@ Overview of ADALab Papers at VLDB 2021
 =========================================
 
 
-<b>Cerebro meets Data Systems</b>. [Paper](https://adalabucsd.github.io/papers/2021_Cerebro-DS.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html). [Blog post](https://adalabucsd.github.io/research-blog/cerebro-ds.html)<br/>
+<b>Cerebro meets Data Systems</b>. [Paper](https://adalabucsd.github.io/papers/2021_Cerebro-DS.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html). [Blog post](https://adalabucsd.github.io/research-blog/cerebro-ds.html). [Talk video](https://youtu.be/SK9wTzO4K7M).<br/>
 
 We had recently published a bunch about our Cerebro system and a new parallel execution technique
 for stochastic gradient descent we call Model Hopper Parallelism (MOP),
@@ -59,7 +61,7 @@ I'd suggest starting with Yuhao's [blog post](https://adalabucsd.github.io/resea
 <br/><br/>
 
 
-<b>Kingpin</b> (part of Cerebro). [Paper](https://adalabucsd.github.io/papers/2021_Kingpin_VLDB.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html).<br/>
+<b>Kingpin</b> (part of Cerebro). [Paper](https://adalabucsd.github.io/papers/2021_Kingpin_VLDB.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html). [Talk video](https://www.youtube.com/watch?v=OlTknBfBmvM).<br/>
 
 In the Cerebro project we are exploring a larger space of hybrid parallelism
 techniques to improve resource efficiency for ML/DL workloads. 
@@ -88,7 +90,7 @@ learning over groups.
 <br/>
 
 
-<b>Cerebro Demo</b>. [Paper](https://adalabucsd.github.io/papers/2021_Cerebro_VLDB_Demo.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html).<br/>
+<b>Cerebro Demo</b>. [Paper](https://adalabucsd.github.io/papers/2021_Cerebro_VLDB_Demo.pdf). [Project webpage](https://adalabucsd.github.io/cerebro.html). [Demo video](https://youtu.be/K3THQy5McXc).<br/>
 
 In this demonstration, Liangde and Supun present our new interface for Cerebro that
 breaks a pervasive (false) dichotomy in DL interfaces: interactive human-in-the-loop
@@ -113,7 +115,7 @@ Do check out this [short demo overview video](https://youtu.be/K3THQy5McXc).
 </div>
 <br/>
 
-<b>Trinity</b> (part of Morpheus). [Paper](https://adalabucsd.github.io/papers/2021_Trinity_VLDB.pdf). [Project webpage](https://adalabucsd.github.io/morpheus.html).<br/>
+<b>Trinity</b> (part of Morpheus). [Paper](https://adalabucsd.github.io/papers/2021_Trinity_VLDB.pdf). [Project webpage](https://adalabucsd.github.io/morpheus.html). [Talk video](https://www.youtube.com/watch?v=osvBmZs2MsM).<br/>
 
 We have published a bunch before on <i>factorized learning</i>, a paradigm I had introduced
 in my PhD days to push ML computations down through joins of tables to speed up ML
@@ -155,6 +157,8 @@ course series for both BS and graduate levels. I am helping create UCSD's first
 Online Masters degree in Data Science, run jointly by CSE and HDSI.
 I look forward to sparring with the other panelists and host on the pressing questions
 and lessons for DB education going forward!
+<br/>
+Edit: [Video of panel discussion](https://www.youtube.com/watch?v=DOWumD2UpOQ). 
 <br/> 
 
 <b>Round table on Systems for ML.</b>
@@ -199,6 +203,8 @@ issues of model selection and system scalability. Or as I phrase it more colorfu
 I will bust some common "damaging delusions" of DL practice. I will also cover how 
 DL users and system developers can avoid those delusions by drawing upon our experiences
 in Project Cerebro.
+<br/>
+Edit: [Talk video](https://www.youtube.com/watch?v=UP9__WsfSuc).
 <br/>
 <br/>
 
