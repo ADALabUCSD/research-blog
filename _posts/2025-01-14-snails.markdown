@@ -11,6 +11,11 @@ author: Kyle Luoma
 
 *This post is about our project SNAILS and paper: SNAILS: Schema Naming Assessments for Improved LLM-based SQL Inference, to be published at SIGMOD/PODS 2025. You can access the project artifacts and code [on our GitHub repository](https://www.github.com/kyleluoma/snails) and learn more about our research in our [technical report](https://adalabucsd.github.io/papers/TR_2025_SNAILS.pdf).*
 
+<p style="text-align:center;">
+<img src="{{site.baseurl}}/assets/2025-01-14-snails/naturalness-effect-illustration.png" width="1200" alt="table">
+</p>
+
+
 LLMs have revolutionized natural language interfaces with databases (NLIDB), and there are *many* interesting and effective NL-to-SQL methods described in various papers and evaluated on NL-to-SQL-focused benchmarks including Spider and BIRD. But what, until now, was somewhat lacking was a deep examination of schema identifier (table and column names) *naturalness*, and how it affects NL-to-SQL performance.
 
 Enter our SNAILS project! With SNAILS, we posit that the way a database schema is named will have a major effect on the quality of an LLM-based NLI integration with real world databases. Specifically, more naturally-named schemas will perform better than less natural schemas, and (spoiler alert!) the findings published in our SIGMOD 2025 paper show just that–there is a statistically significant correlation between schema naturalness and NL-to-SQL performance.
