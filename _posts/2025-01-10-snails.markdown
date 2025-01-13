@@ -1,7 +1,7 @@
 ---
 title: "How natural is your database schema?"
 layout: post
-date: 2025-01-14 15:00:00 +0800
+date: 2025-01-10 01:01:01 +0800
 category: research
 tags: [nl-to-sql, schema naturalness, benchmark]
 comments: true
@@ -12,7 +12,7 @@ author: Kyle Luoma
 *This post is about our project SNAILS and paper: SNAILS: Schema Naming Assessments for Improved LLM-based SQL Inference, to be published at SIGMOD/PODS 2025. You can access the project artifacts and code [on our GitHub repository](https://www.github.com/kyleluoma/snails) and learn more about our research in our [technical report](https://adalabucsd.github.io/papers/TR_2025_SNAILS.pdf).*
 
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/2025-01-14-snails/naturalness-effect-illustration.png" width="1200" alt="table">
+<img src="{{site.baseurl}}/assets/2025-01-10-snails/naturalness-effect-illustration.png" width="1200" alt="table">
 </p>
 
 
@@ -22,10 +22,10 @@ Enter our SNAILS project! With SNAILS, we posit that the way a database schema i
 
 ## Isn't it obvious?
 
-Intuitively, more naturally-named schemas should perform better, but it benefits us to actually *know* the effect that schema naming has on performance. Once we know (and knowing is half the battle), then we can take definitive action toward measurable improvements in schema naturalness that we *know* will improve the chances of a successful NLI integration with our databases.
+Intuitively, more naturally-named schemas should perform better, but but from a scientific standpoint, it helps to know how we can quantify the impact and how it varies across LLMs, queries, and databases. Once we know (and knowing is half the battle), then we can take definitive action toward measurable improvements in schema naturalness that we *know* will improve the chances of a successful NLI integration with our databases.
 
 ## What is naturalness, exactly?
-What is naturalness, exactly? Although that can seem like a philosophical question, in our paper, we concretely define naturalness with a categorical approach with three distinct levels: Regular, Low, and Least. 
+Although that can seem like a philosophical question, in this first work on this topic, we take a first step by concretely defining naturalness with a categorical approach with three distinct levels: Regular, Low, and Least. 
 
 - **Regular**: The identifier contains complete English words with no abbreviations or acronyms, or contains only acronyms in common usage (e.g., ID or GPS). 
 - **Low**: The identifier contains abbreviated English words and less common acronyms that are usually recognizable by non-domain experts (e.g., UTM or  CPI). The meaning of the identifier can be inferred without consulting external documentation.
@@ -45,12 +45,12 @@ We won't bore you with a myriad of examples, but if you'd like to peruse the SNA
 SNAILS is a set of NL-to-SQL-related artifacts designed to explore the effects of schema naming on LLM-based NL-to-SQL performance. It includes a set of real-world databases and associated natural language (NL) : SQL gold query pairs, human-labeled data containing naturalness classifications the tables and columns in the database collection, a model and method for ML-based naturalness classification, and prompting strategies for improving schema identifier naturalness.
 
 ### It started with a question
-The SNAILS project started with a simple question: *How does a database's schema design affect the performance of NL-to-SQL?* There are several different aspects of schema design, including normalization levels, dependency constraints, element naming, and more. For this first project, we decided to focus on schema naming, which quickly led is toward the concept of *naturalness*.
+The SNAILS project started with a simple question: *How does a database's schema design affect the performance of NL-to-SQL?* There are several different aspects of schema design, including normalization levels, dependency constraints, element naming, and more. For this first project, we decided to focus on schema naming, which quickly led us toward the concept of *naturalness*.
 
 ### It revealed a need
 
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/2025-01-14-snails/benchmark_naturalness_compare.png" width="600" alt="table">
+<img src="{{site.baseurl}}/assets/2025-01-10-snails/benchmark_naturalness_compare.png" width="600" alt="table">
 </p>
 
 The chart above shows the frequency of identifiers of different naturalness levels across benchmarks and schema collections. We identified a need for a new set of real-world databases that contained a variety of different naming patterns. This is because existing benchmarks such as Spider and Bird, while excellent for their intended purposes, tended to contain more naturally-named schemas than we encountered when we began analyzing naming patterns in real world databases and schema repositories such as Schema Pile.
@@ -58,7 +58,7 @@ The chart above shows the frequency of identifiers of different naturalness leve
 ### It inspired a set of artifacts
 
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/2025-01-14-snails/snails_artifacts.png" width="1200" alt="table">
+<img src="{{site.baseurl}}/assets/2025-01-10-snails/snails_artifacts.png" width="1200" alt="table">
 </p>
 
 In response to the need for a schema naming-focused dataset, we created several artifacts that we used to perform our analysis:
@@ -77,15 +77,21 @@ In response to the need for a schema naming-focused dataset, we created several 
 
 ### It showed us how naturalness affects NL-to-SQL performance
 
+We ran several LLMs including GPT-4o, GPT 3.5 Turbo, Gemini 1.5 Pro, Phind CodeLlama (a finetuned version of Code Llama), and two more complex NL-to-SQL workflows: CodeS (StarCoder finetuned for NL-to-SQL), and DinSQL.  We also created alternate virtual schemas of different naturalness levels for each database. The individual bars in both of the charts below display performance for each database naturalness version. 
+
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/2025-01-14-snails/snails-schema-linking-performance.png" width="600" alt="table">
+<img src="{{site.baseurl}}/assets/2025-01-10-snails/execution-accuracy-barplot.png" width="600" alt="table">
+</p>
+
+The the typical metric for most NL-to-SQL benchmarks is Execution Accuracy, and so we also use it as one of our evaluation methods. The chart above shows execution accuracy for each LLM or NL-to-SQL method over each schema naturalness level.
+
+<p style="text-align:center;">
+<img src="{{site.baseurl}}/assets/2025-01-10-snails/snails-schema-linking-performance.png" width="600" alt="table">
 </p>
 
 The chart above shows QueryRecall, which is the number of database identifiers in an LLM-generated SQL query over the number present in the corresponding gold SQL query. In our project, we created alternate virtual schemas of different naturalness levels for each database. The individual bars in the chart display the QueryRecall performance for each database naturalness version. 
 
-We ran several LLMs including GPT-4o, GPT 3.5 Turbo, Gemini 1.5 Pro, Phind CodeLlama (a finetuned version of Code Llama), and two more complex NL-to-SQL workflows: CodeS (StarCoder finetuned for NL-to-SQL), and DinSQL. 
-
-As you can see in the chart, the magnitude of the effect that naturalness has on schema linking varies by LLM, with more recent and more capable LLMs showing less sensitivity and smaller LLMs showing more sensitivity to naturalness. Despite a higher tolerance for lower naturalness in some models, we can still observe decreasing performance as naturalness decreases, particularly for our Least natural schemas.
+As you can see from these charts, the magnitude of the effect that naturalness has on schema linking varies by LLM, with more recent and more capable LLMs showing less sensitivity and smaller LLMs showing more sensitivity to naturalness. Despite a higher tolerance for lower naturalness in some models, we can still observe decreasing performance as naturalness decreases, particularly for our Least natural schemas.
 
 ### It offers more research opportunities
 
