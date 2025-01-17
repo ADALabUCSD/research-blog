@@ -38,7 +38,7 @@ One of the databases in the SNAILS collection is a training database from the SA
 | Column          | AcqAcct | AcquisitionTaxAccount | **AcqAcct**     | AcAct             |
 | Table           | ADOC    | invoice_history       | inv_hist        | **ADOC**          |
 
-We won't bore you with a myriad of examples, but if you'd like to peruse the SNAILS project artifacts, you can find [thousands more examples of identifiers and their naturalness levels](https://github.com/KyleLuoma/SNAILS/tree/main/schema-xwalks/consolidated_and_validated).
+We won't bore you with a myriad of examples, but if you'd like to peruse the SNAILS project artifacts, you can find [thousands more examples of identifiers and their naturalness levels](https://github.com/KyleLuoma/SNAILS/tree/main/SNAILS_Artifacts/naturalness_classifications).
 
 ## What is SNAILS?
 
