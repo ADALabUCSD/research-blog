@@ -22,7 +22,7 @@ Enter our SNAILS project! With SNAILS, we posit that the way a database schema i
 
 ## Isn't it obvious?
 
-Intuitively, more naturally-named schemas should perform better, but but from a scientific standpoint, it helps to know how we can quantify the impact and how it varies across LLMs, queries, and databases. Once we know (and knowing is half the battle), then we can take definitive action toward measurable improvements in schema naturalness that we *know* will improve the chances of a successful NLI integration with our databases.
+Intuitively, more naturally-named schemas should perform better, but from a scientific standpoint, it helps to know how we can quantify the impact and how it varies across LLMs, queries, and databases. Once we know (and knowing is half the battle), then we can take definitive action toward measurable improvements in schema naturalness that we *know* will improve the chances of a successful NLI integration with our databases.
 
 ## What is naturalness, exactly?
 Although that can seem like a philosophical question, in this first work on this topic, we take a first step by concretely defining naturalness with a categorical approach with three distinct levels: Regular, Low, and Least. 
